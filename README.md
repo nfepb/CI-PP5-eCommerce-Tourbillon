@@ -23,14 +23,17 @@ The user stories are categories in 3 classes of users:
     07. Access my shopping bag to update quantities or remove items.
     07. Buy a product by using the website checkout system.
     08. Signup for the newsletter.
-
-2. As a <strong>Customer</strong>, I can:
-    08. View my previous orders.
-    06. Post a review on a product.
+    <br>
+    <br>
+2. As a <strong>Customer</strong>, I can:<br>
+    01. View my previous orders.
+    02. Post a review on a product.
     03. Update or Delete a previously posted review.
     04. Save my information to my profile.
     05. Update my profile information.
     06. Checkout without having to fill in my previously saved information. 
+    <br>
+    <br>
 
 3. As a <strong>Store Administrator</strong>, I can:
     01. Create a draft of a new product.
