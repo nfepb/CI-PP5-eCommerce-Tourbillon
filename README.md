@@ -2,6 +2,45 @@
 
 # PP5-eCommerce-Tourbillon
 
+# User Experience (UX)
+
+## User Stories
+
+The user stories are categories in 3 classes of users:
+- Visitor, as a user visiting the website and discovering the brand and the services of the app,
+- Customer, as a user that is logged in,
+- Store Administrator, as a superuser with full access.
+
+1. As a <strong>Visitor</strong>, I can:
+    01. Understand the purpose of this website from the homepage.
+    02. Navigate around the site and easily find the desired content.
+    02. View the list of products and filter lists on chosen categories.
+    03. Search for products to find a specific item on the app.
+    04. Click on a product to view its details.
+    06. View product ratings and comments so that I can read other users opinions.
+    05. Register for an account to access the services available to members.
+    06. Add a product to my shopping bag.
+    07. Access my shopping bag to update quantities or remove items.
+    07. Buy a product by using the website checkout system.
+    08. Signup for the newsletter.
+
+2. As a <strong>Customer</strong>, I can:
+    08. View my previous orders.
+    06. Post a review on a product.
+    03. Update or Delete a previously posted review.
+    04. Save my information to my profile.
+    05. Update my profile information.
+    06. Checkout without having to fill in my previously saved information. 
+
+3. As a <strong>Store Administrator</strong>, I can:
+    01. Create a draft of a new product.
+    02. Publish new products to become visible to other app users.
+    03. Create & manage categories.
+    03. Add a product to a category.
+    04. Delete products & categories.
+    06. Approve users' published reviews.
+
+
 # Marketing Strategy (Optional)
 
 - Who are your users? People that are already familiar with timeless watch pieces, people really enthusiast about watchmaking and people looking for luxury watches. 
@@ -11,6 +50,7 @@
 - Would your business run sales or offer discounts? How do you think your users would most like to hear about these offers? Tourbillon's business would run on sales of exclusive timepieces difficult to find on the horologist.
 - What are the goals of your business? Which marketing strategies would offer the best ways to meet those goals?
 - Would your business have a budget to spend on advertising? Or would it need to work with free or low cost options to market itself?
+<br>
 
 # Search Engine Optimization (SEO)
 
@@ -31,6 +71,7 @@
 ## Robots.txt
 
 - A robots.txt file was also created to increase the quality of the site. This file tells search engines where they are not to go on the website by listing the folders & files that will not be indexed or crawled. It ultimately improves the SEO ranking.
+<br>
 
 # Privacy Policy
 
