@@ -77,7 +77,7 @@ The user stories are categories in 3 classes of users:
 
 ## Agile Methodology
 
-The principles of the Agile Methodology framed how this project was tackled. The GitHub project management tools were used to keep track of the different sprints. They can be found [here](visibleFields).
+The principles of the Agile Methodology framed how this project was tackled. The GitHub project management tools were used to keep track of the different sprints. They can be found [here](https://github.com/users/nfepb/projects/5/views/2?visibleFields=%5B%22Title%22%2C%22Status%22%2C%22Labels%22%2C%22Milestone%22%5D).
 
 The status of the issues tracked through 3 different sections:
 
@@ -132,6 +132,8 @@ The status of the issues tracked through 3 different sections:
 ### Product Management
 
 ### Messages - Signup
+
+### Messages - Checkout Confirmation
 
 ## Future Features
 
