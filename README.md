@@ -2,9 +2,22 @@
 
 # PP5-eCommerce-Tourbillon
 
-# User Experience (UX)
 
-## User Stories
+# Strategy Plane
+
+## App's Goals
+
+* To provide the users with a pleasant experience on the website where they read more about the offered watches.
+* To provide users with an intuitive and secure checkout process to purchase the imtes they are interested in.
+* To allow users to share their thoughts on their favorite items.
+* To allow the store admin users to approve, update and delete reviews from the frontend.
+* To provide users with clear and adequate responses based on their input or actions.
+
+# Scope Plane
+
+## User Experience (UX)
+
+### User Stories
 
 The user stories are categories in 3 classes of users:
 - Visitor, as a user visiting the website and discovering the brand and the services of the app,
@@ -22,18 +35,18 @@ The user stories are categories in 3 classes of users:
         * to easily consult information on specific items.
     04. Click on a product to view its details,
         * to read more on items I find interesting.
-    06. View product ratings and comments so that I can read other users opinions,
+    06. View product ratings and comments so that I can read other users' opinions,
         * to be better informed on other Tourbillon's users experience of this specific product.
     05. Register for an account to access the services available to members.
         * to have a personalised account and access restricted areas of the site based on my profile.
     06. Add a product to my shopping bag,
         * to purchase items I wish to acquire.
     07. Access my shopping bag,
-        * to update quantities or remove items
+        * to update quantities or remove items and view the total cost.
     07. Buy a product by using the website checkout system,
         * to check out quickly and in a secure environment.
     08. Signup for the newsletter,
-        * to stay up to date with the latest addition to Tourbillon's catalogue.
+        * to stay up to date with the latest addition to Tourbillon's catalog.
     <br>
     <br>
 2. As a <strong>Customer</strong>, I can:<br>
@@ -45,8 +58,6 @@ The user stories are categories in 3 classes of users:
         * to own the content that I post on Tourbillon's app. 
     04. Save my information to my profile,
         * to make the checkout process easier for future purchases.
-    05. Update my profile information,
-        * to make sure that purchased items are shipped to the right location.
     06. Checkout without having to fill in my previously saved information,
         * to make the checkout process more seamless and improve the customer experience.
     <br>
@@ -55,16 +66,74 @@ The user stories are categories in 3 classes of users:
 3. As a <strong>Store Administrator</strong>, I can:
     01. Create a draft of a new product,
         * to work on products on the backend.
-    02. Publish new products to become visible to other app users,
-        * to allow only products with all the information to be published. 
+    02. Manage products,
+        * to keep product information up to date and publish only selected products on the website.
     03. Create & manage categories,
-        * to link products to categories.
-    03. Add a product to a category,
-        * to make navigation and product filtering easier for all users.
+        * to link products to categories and make product filtering easier.
     04. Delete products & categories,
         * to remove categories that are no longer going to be used.
     06. Approve users' published reviews,
         * to manage the community engagement and only allow useful comments to be posted.
+
+## Agile Methodology
+
+The principles of the Agile Methodology framed how this project was tackled. The GitHub project management tools were used to keep track of the different sprints. They can be found [here](visibleFields).
+
+The status of the issues tracked through 3 different sections:
+
+* 📚 Backlog
+* 🚧 In Progress
+* ✅ Done
+
+# Structure Plane
+
+## Database Diagram 
+
+## Typography
+
+## Colours
+
+## Images
+
+## Wireframes
+
+# Surface Plane
+
+## Features
+
+### Navbar
+
+### Footer
+
+### Home Page
+
+### Login Page
+
+### Signup Page
+
+### Logout Page
+
+### Products Listing
+
+### Product Details Page
+
+#### Review
+
+### Shopping Bag
+
+### Checkout
+
+### Checkout - Success
+
+### Profile Page
+
+### 404 Page
+
+### Product Management
+
+### Messages - Signup
+
+## Future Features
 
 
 # Marketing Strategy (Optional)
