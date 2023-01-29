@@ -87,6 +87,8 @@ The status of the issues tracked through 3 different sections:
 * 🚧 In Progress
 * ✅ Done
 
+The websites of several watch houses helped me define what were some of the critical features to get to a MVP, and which features were considered 'nice to have' for later development. The ones this project takes most inspiration from in terms of features are the [Longines](https://www.longines.com/), the [Rolex](https://www.rolex.com/), and the [Chrono24](https://www.chrono24.fr/) websites.
+
 # Structure Plane
 
 ## Database Diagram 
