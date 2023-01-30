@@ -97,7 +97,14 @@ The websites of several watch houses helped me define what were some of the crit
 
 ## Typography
 
+* <i>Monsieur La Doulaise</i> is used for the site logo.
+* <i>Montserrat</i> is used for the rest of the content of the site, including headers.
+
 ## Colours
+
+![Color Palette](docs/schema/tourbillon-color-palette.png)
+
+The name of the app, "Tourbillon" has two definitions. In watchmaking (or horology), it defines a type of watch escapement to increase the accuracy. In French, a tourbillon is used to define a whirlwind. The main colour chosen, Prussian Blue, Pacific Blue, and White are used to reference colour of the sea in turmoil. The Columbia Blue and Cafe Noir are there to reference respectively the casing foa watch, along with its brown leather strap.
 
 ## Images
 
