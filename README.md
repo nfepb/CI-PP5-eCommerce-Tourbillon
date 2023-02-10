@@ -245,7 +245,7 @@ Inside this file add these 3 lines:
 ## Install Allauth
 
 1. Install the Python package with `pip3 install django-allauth`
-2. Verify that ‘django.contrib.sites’ is in the INSTALLED_APPS of the settings.py file.
+2. Verify that ‘django.contrib.sites’ is in the INSTALLED_APPS of the settings.py file
 
 # Credits
 
