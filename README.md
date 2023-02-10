@@ -221,7 +221,9 @@ We do not use cookies on the website and do not display Google AdSense to our us
 
 ## Github deployment
 
-1. Next you will need to add a gitignore file. To do this enter the command line: `touch .gitignore`
+1. Go to the [Code Institute Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
+2. Click on Use This Template
+3. Next you will need to add a gitignore file. To do this enter the command line: `touch .gitignore`
 Inside this file add these 3 lines:
 ```
     *.sqlite3
@@ -231,9 +233,6 @@ Inside this file add these 3 lines:
 
 ## Creating the Django app
 
-1. Go to the [Code Institute Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
-2. Click on Use This Template
-4. When the image for the template and the Gitpod are ready open a new terminal to start a new Django App
 5. In your IDE, install Django and gunicorn with `pip3 install 'django<4' gunicorn`
 6. Install supporting database libraries dj_database_url and psycopg2: `pip3 install dj_database_url psycopg2`
 7. To create file for requirements, in the terminal window type `pip freeze --local > requirements.txt`
@@ -242,6 +241,11 @@ Inside this file add these 3 lines:
 10. Add your app to the list of installed apps in settings.py file: *you_app_name*
 11. Migrate changes: in the terminal window type `python3 manage.py migrate`
 12. Run the server to test if the app is installed, in the terminal "The install worked successfully! Congratulations!"
+
+## Install Allauth
+
+1. Install the Python package with `pip3 install django-allauth`
+2. Verify that ‘django.contrib.sites’ is in the INSTALLED_APPS of the settings.py file.
 
 # Credits
 
