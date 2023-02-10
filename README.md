@@ -219,6 +219,20 @@ We do not use cookies on the website and do not display Google AdSense to our us
 | [Font-Aweome](https://fontawesome.com/) | Used for the icons. |
 | [Stripe](https://stripe.com/) | This solution is used to process all payments in the checkout process and to send webhooks on the status of those. |
 
+## Creating the Django app
+
+1. Go to the [Code Institute Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
+2. Click on Use This Template
+4. When the image for the template and the Gitpod are ready open a new terminal to start a new Django App
+5. In your IDE, install Django and gunicorn with `pip3 install 'django<4' gunicorn`
+6. Install supporting database libraries dj_database_url and psycopg2: `pip3 install dj_database_url psycopg2`
+7. To create file for requirements, in the terminal window type `pip freeze --local > requirements.txt`
+8. Create project: in the terminal window type `django-admin startproject *your_project_name*`
+9. Create app: in the terminal window type `python3 manage.py startapp *your_app_name*`
+10. Add your app to the list of installed apps in settings.py file: *you_app_name*
+11. Migrate changes: in the terminal window type `python3 manage.py migrate`
+12. Run the server to test if the app is installed, in the terminal "The install worked successfully! Congratulations!"
+
 # Credits
 
 ## Content
