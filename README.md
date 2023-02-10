@@ -219,6 +219,16 @@ We do not use cookies on the website and do not display Google AdSense to our us
 | [Font-Aweome](https://fontawesome.com/) | Used for the icons. |
 | [Stripe](https://stripe.com/) | This solution is used to process all payments in the checkout process and to send webhooks on the status of those. |
 
+## Github deployment
+
+1. Next you will need to add a gitignore file. To do this enter the command line: `touch .gitignore`
+Inside this file add these 3 lines:
+```
+    *.sqlite3
+    *.pyc
+    __pycache__
+```
+
 ## Creating the Django app
 
 1. Go to the [Code Institute Gitpod Full Template](https://github.com/Code-Institute-Org/gitpod-full-template)
