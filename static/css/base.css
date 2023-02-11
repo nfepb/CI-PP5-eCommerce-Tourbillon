@@ -45,11 +45,17 @@ i {
     font-size: 18px !important;
 }
 
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.2rem;
+}
+
 **********
 /* BASE.HTML */
 
-.logo {
+.main-logo-link {
     font-size: clamp(0.5rem, 2.5vw, 1.5rem);
+    width: fit-content;
     letter-spacing: 2px;
     z-index: 100;
     font-weight: 500;
