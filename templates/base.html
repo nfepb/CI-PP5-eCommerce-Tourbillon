@@ -34,7 +34,45 @@
             </div>
           </form>
         </div>
-        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0"></div>
+        <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
+          <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <li class="list-inline-item dropdown">
+               <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+                  aria-haspopup="true" aria-expanded="false">
+                  <div class="text-center">
+                     <div><i class="fas fa-user fa-lg interactive-color"></i></div>
+                     <p class="my-0">My Account</p>
+                  </div>
+               </a>
+               <div class="dropdown-menu border-0" aria-labelledby="user-options">
+                  {% if request.user.is_authenticated %}
+                  {% if request.user.is_superuser %}
+                  <a href="" aria-label="Go to the product management page" class="dropdown-item">Product Management</a>
+                  {% endif %}
+                  <a href="{% url 'profile' %}" aria-label="Go to the profile page" class="dropdown-item">Profile</a>
+                  <a href="{% url 'account_logout' %}" aria-label="Go to the accout logout page" class="dropdown-item">Logout</a>
+                  {% else %}
+                  <a href="{% url 'account_signup' %}" aria-label="Go to the signup page" class="dropdown-item">Register</a>
+                  <a href="{% url 'account_login' %}" aria-label="Go to the login page" class="dropdown-item">Login</a>
+                  {% endif %}
+               </div>
+            </li>
+            <li class="list-inline-item">
+               <a  href="" aria-label="Go to the view bag page" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
+                  <div class="text-center">
+                     <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                     <p class="my-0">
+                        {% if grand_total %}
+                        €{{ grand_total|floatformat:2 }}
+                        {% else %}
+                        €0.00
+                        {% endif %}
+                     </p>
+                  </div>
+               </a>
+            </li>
+         </ul>
+        </div>
       </div>
     </header>
 
