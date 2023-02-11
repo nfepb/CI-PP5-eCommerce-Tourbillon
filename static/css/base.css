@@ -1,0 +1,57 @@
+/* GOOGLE FONTS */
+
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&family=Monsieur+La+Doulaise&family=Roboto:wght@300;400&display=swap');
+/* Monsieur La Doulaise */
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+/* Lato */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap');
+/* Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+**********
+/* GENERAL STYLES */
+
+html {
+    height: 100%;
+}
+
+:root {
+    --prussian-blue: rgb(0, 49, 83);
+    --pacific-blue: rgb(28, 169, 201);
+    --overlay-black: rgba(0, 0, 0, 0.7);
+    --fully-black: rgb(34, 34, 34);
+    --silver-grey: rgb(194, 195, 198);
+    --cafe-noir: rgb(75, 54, 33);
+    --white: rgb(255, 255, 255);
+    --yellow: rgb(255, 193, 7);
+    --red: rgb(220, 53, 69);
+
+    /* font Color */
+    --text-white: rgb(249, 249, 249);
+    --text-grey: rgb(153, 150, 145);
+    --text-light-grey: rgb(194, 195, 198);
+    --text-black: rgba(17, 17, 17);
+}
+
+a:hover {
+    opacity: 0.7;
+}
+
+ul {
+    list-style: none;
+}
+
+i {
+    font-size: 18px !important;
+}
+
+**********
+/* BASE.HTML */
+
+.logo {
+    font-size: clamp(0.5rem, 2.5vw, 1.5rem);
+    letter-spacing: 2px;
+    z-index: 100;
+    font-weight: 500;
+    font-family: 'Monsieur La Doulaise', cursive;
+}
