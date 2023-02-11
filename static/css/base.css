@@ -54,8 +54,13 @@ body {
 /* BASE.HTML */
 
 .main-logo-link {
-    font-size: clamp(0.5rem, 2.5vw, 1.5rem);
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
+}
+
+.logo {
+    font-size: 3em;
     letter-spacing: 2px;
     z-index: 100;
     font-weight: 500;
