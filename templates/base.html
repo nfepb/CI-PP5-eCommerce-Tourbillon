@@ -89,9 +89,26 @@
      </div>
     </header>
 
+    <!-- TOAST MESSAGES -->
     {% if messages %}
-    <div class="message-container"></div>
+    <div class="message-container">
+      <!-- prettier-ignore -->
+      {% for message in messages %}
+        {% with message.level as level %}
+            {% if level == 40 %}
+                {% include 'includes/toasts/toast_error.html' %}
+            {% elif level == 30 %}
+                {% include 'includes/toasts/toast_warning.html' %}
+            {% elif level == 25 %}
+                {% include 'includes/toasts/toast_success.html' %}
+            {% else %}
+                {% include 'includes/toasts/toast_info.html' %}
+            {% endif %}
+        {% endwith %}
+      {% endfor %}
+    </div>
     {% endif %}
+    <!-- END TOAST MESSAGES -->
 
     <!-- Page Header -->
     {% block page_header %} {% endblock %}
@@ -100,6 +117,11 @@
     {% block content %} {% endblock %}
 
     <!-- Postload JavaScript -->
-    {% block postloadjs %} {% endblock %}
+    {% block postloadjs %}
+    <!-- JS to display the toast messages -->
+    <script type="text/javascript">
+      $(".toast").toast("show");
+    </script>
+    {% endblock %}
   </body>
 </html>
