@@ -37,7 +37,7 @@
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
             <li class="list-inline-item dropdown">
-               <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown"
+               <a class="text-black nav-link" href="#" id="user-options" data-bs-toggle="dropdown"
                   aria-haspopup="true" aria-expanded="false">
                   <div class="text-center">
                      <div><i class="fas fa-user fa-lg interactive-color"></i></div>
@@ -50,10 +50,10 @@
                   <a href="" aria-label="Go to the product management page" class="dropdown-item">Product Management</a>
                   {% endif %}
                   <a href="" aria-label="Go to the profile page" class="dropdown-item">Profile</a>
-                  <a href="" aria-label="Go to the accout logout page" class="dropdown-item">Logout</a>
+                  <a href="{% url 'account_logout' %}" aria-label="Go to the accout logout page" class="dropdown-item">Logout</a>
                   {% else %}
-                  <a href="" aria-label="Go to the signup page" class="dropdown-item">Register</a>
-                  <a href="" aria-label="Go to the login page" class="dropdown-item">Login</a>
+                  <a href="{% url 'account_signup' %}" aria-label="Go to the signup page" class="dropdown-item">Register</a>
+                  <a href="{% url 'account_login' %}" aria-label="Go to the login page" class="dropdown-item">Login</a>
                   {% endif %}
                </div>
             </li>
@@ -90,6 +90,11 @@
           </div>
         </nav>
      </div>
+
+     <div class="row text-center marquee">
+      <h5 class="my-2 text-uppercase"><i class="fad fa-box-full"></i> <span
+              class="text-success">Free</span> delivery on orders over €{{ free_delivery_threshold }}!</h5>
+  </div>
     </header>
 
     <!-- TOAST MESSAGES -->
