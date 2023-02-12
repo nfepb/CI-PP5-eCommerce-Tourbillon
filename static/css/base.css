@@ -8,7 +8,7 @@
 /* Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
 
-**********
+/***********/
 /* GENERAL STYLES */
 
 html {
@@ -50,7 +50,7 @@ body {
     font-size: 1.2rem;
 }
 
-**********
+/***********/
 /* BASE.HTML */
 
 .main-logo-link {
@@ -67,7 +67,33 @@ body {
     font-family: 'Monsieur La Doulaise', cursive;
 }
 
-**********
+/***********/
+/* NAVBAR */
+
+.navbar-expand-lg {
+    background-color: var(--silver-grey);
+    margin-top: 3.75em;
+    padding: 0;
+}
+
+.topnav {
+    margin-top: 1px;
+}
+
+.topnav.topnav-active {
+    margin-top: -8px;
+}
+
+.navbar-light .navbar-nav .nav-link {
+    padding: 1.8em 1.25em;
+}
+
+.navbar-nav .nav-link:hover {
+    background-color: var(--prussian-blue);
+    color: var(--silver-grey) !important;
+}
+
+/***********/
 /* TOAST MESSAGES */
 
 .message-container {
@@ -147,4 +173,134 @@ footer h6,
 
 .arrow-dark {
     border-bottom-color: #343a40 !important;
+}
+
+
+/***********/
+/* MEDIA QUERIES */
+
+@media only screen and (min-width: 1200px) {
+    .container {
+        max-width: 80%;
+    }
+}
+
+@media (min-width: 992px) {
+    .header-container {
+        padding-top: 164px;
+    }
+
+    .topnav {
+        padding-right: 0 !important;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    body {
+        height: calc(100vh - 116px);
+    }
+
+    .header-container {
+        padding-top: 82px;
+    }
+
+    .logo-mobile {
+        display: block !important;
+        font-size: 1rem;
+    }
+
+    .nav-link {
+        padding: 0.15rem;
+    }
+
+    .navbar-expand-lg {
+        margin-top: -1px !important;
+    }
+
+    .topnav.topnav-active {
+        margin-top: 1px;
+    }
+
+    .nav-link i.fa-lg {
+        font-size: 1rem;
+    }
+
+    .navbar-toggler {
+        padding: .6rem .6rem;
+        font-size: 1rem;
+    }
+
+    #delivery-banner h4 {
+        font-size: .9rem;
+    }
+
+    .btn.btn-outline-black.rounded-0,
+    .btn.btn-black.rounded-0,
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        padding: .6rem 1rem;
+    }
+
+    .btn.btn-outline-black.rounded-0.btn-lg,
+    .btn.btn-black.rounded-0.btn-lg {
+        font-size: .75rem;
+        margin-bottom: 20px;
+        width: 190px;
+    }
+
+    .increment-qty,
+    .decrement-qty {
+        padding: .25rem .5rem !important;
+    }
+
+    .navbar-expand-lg {
+        margin-top: 0px;
+        padding: 10px 15px;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .row-reverse {
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+        flex-direction: column !important;
+    }
+
+    #footer ul li,
+    #footer .sub-title,
+    #footer p {
+        width: 300px;
+    }
+
+    #footer .trust-company {
+        width: 180px;
+        position: relative;
+        margin-top: -130px;
+        margin-left: 380px;
+    }
+
+    #footer .copyright p {
+        width: initial;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .display-desktop {
+        display: none !important;
+    }
+
+    .display-mobile {
+        display: block !important;
+    }
+}
+
+@media only screen and (max-width: 333px) {
+    .list-inline-item p {
+        font-size: 1rem;
+    }
+
+    .navbar-expand-lg {
+        padding: 10px 6px;
+    }
 }
