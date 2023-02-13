@@ -1,8 +1,8 @@
-<!-- HEAD HTML -->
-{% include "includes/head.html" %}
-<!-- END OF HEAD HTML -->
+  <!-- HEAD HTML -->
+  {% include "includes/head.html" %}
+  <!-- END OF HEAD HTML -->
 
-  <body >
+  <body>
     <!-- Header -->
     <header class="container-fluid fixed-top p-0">
       <div class="row pt-lg-2 d-none d-lg-flex">
@@ -10,7 +10,7 @@
           class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left"
         >
           <a href="(% url 'home' %)" class="nav-link main-logo-link">
-            <h2 class="my-0 logo uppercase">Tourbillon</h2>
+            <h2 class="my-0 logo">Tourbillon</h2>
           </a>
         </div>
         <!-- Search form  -->
@@ -36,65 +36,123 @@
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
           <ul class="list-inline list-unstyled text-center text-lg-right my-0">
+            <!-- Account link -->
             <li class="list-inline-item dropdown">
-               <a class="text-black nav-link" href="#" id="user-options" data-bs-toggle="dropdown"
-                  aria-haspopup="true" aria-expanded="false">
-                  <div class="text-center">
-                     <div><i class="fas fa-user fa-lg interactive-color"></i></div>
-                     <p class="my-0">My Account</p>
-                  </div>
-               </a>
-               <div class="dropdown-menu border-0" aria-labelledby="user-options">
-                  {% if request.user.is_authenticated %}
-                  {% if request.user.is_superuser %}
-                  <a href="" aria-label="Go to the product management page" class="dropdown-item">Product Management</a>
-                  {% endif %}
-                  <a href="" aria-label="Go to the profile page" class="dropdown-item">Profile</a>
-                  <a href="{% url 'account_logout' %}" aria-label="Go to the accout logout page" class="dropdown-item">Logout</a>
-                  {% else %}
-                  <a href="{% url 'account_signup' %}" aria-label="Go to the signup page" class="dropdown-item">Register</a>
-                  <a href="{% url 'account_login' %}" aria-label="Go to the login page" class="dropdown-item">Login</a>
-                  {% endif %}
-               </div>
+              <a
+                class="text-black nav-link"
+                href="#"
+                id="user-options"
+                data-bs-toggle="dropdown"
+                aria-haspopup="true"
+                aria-expanded="false"
+                role="button"
+              >
+                <div class="text-center">
+                  <div><i class="fas fa-user fa-lg"></i></div>
+                  <p class="my-0">My Account</p>
+                </div>
+              </a>
+              <ul class="dropdown-menu border-0" aria-labelledby="user-options">
+                <!-- prettier-ignore -->
+                {% if request.user.is_authenticated %} 
+                {% if request.user.is_superuser %}
+                <li>
+                  <a
+                    href=""
+                    aria-label="Go to the product management page"
+                    class="dropdown-item"
+                    >Product Management</a
+                  >
+                </li>
+                {% endif %}
+                <li>
+                  <a
+                    href=""
+                    aria-label="Go to the profile page"
+                    class="dropdown-item"
+                    >Profile</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="{% url 'account_logout' %}"
+                    aria-label="Go to the accout logout page"
+                    class="dropdown-item"
+                    >Logout</a
+                  >
+                </li>
+                {% else %}
+                <li>
+                  <a
+                    href="{% url 'account_signup' %}"
+                    aria-label="Go to the signup page"
+                    class="dropdown-item"
+                    >Register</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="{% url 'account_login' %}"
+                    aria-label="Go to the login page"
+                    class="dropdown-item"
+                    >Login</a
+                  >
+                </li>
+                {% endif %}
+              </ul>
             </li>
+            <!-- Bag link -->
             <li class="list-inline-item">
-               <a  href="" aria-label="Go to the view bag page" class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link">
-                  <div class="text-center">
-                     <div><i class="fas fa-shopping-bag fa-lg"></i></div>
-                     <p class="my-0">
-                        {% if grand_total %}
-                        €{{ grand_total|floatformat:2 }}
-                        {% else %}
-                        €0.00
-                        {% endif %}
-                     </p>
-                  </div>
-               </a>
+              <a
+                href=""
+                aria-label="Go to the view bag page"
+                class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link"
+              >
+                <div class="text-center">
+                  <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                  <p class="my-0">
+                <!-- prettier-ignore -->
+                {% if grand_total %} €{{ grand_total|floatformat:2 }} 
+                {% else %} €0.00 {% endif %}
+                  </p>
+                </div>
+              </a>
             </li>
-         </ul>
+          </ul>
         </div>
       </div>
       <div class="row">
         <nav class="navbar navbar-expand-lg w-100">
           <div class="container-fluid">
-           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#main-nav"
-              aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
-           <span class="navbar-toggler-icon"></span>
-           </button>
-           <!-- MOBILE NAVBAR -->
-           {% include 'includes/mobile-nav.html' %}
-           <!-- END OF MOBILE NAVBAR -->
-           <!-- MAIN NAVBAR -->
-           {% include 'includes/main-nav.html' %}
-           <!-- END OF MAIN NAVBAR -->
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#main-nav"
+              aria-controls="main-nav"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+            <!-- MOBILE NAVBAR -->
+            {% include 'includes/mobile-nav.html' %}
+            <!-- END OF MOBILE NAVBAR -->
+            <!-- MAIN NAVBAR -->
+            {% include 'includes/main-nav.html' %}
+            <!-- END OF MAIN NAVBAR -->
           </div>
         </nav>
-     </div>
+      </div>
 
-     <div class="row text-center marquee">
-      <h5 class="my-2 text-uppercase"><i class="fad fa-box-full"></i> <span
-              class="text-success">Free</span> delivery on orders over €{{ free_delivery_threshold }}!</h5>
-  </div>
+      <div class="row text-center marquee">
+        <h5 class="my-2 text-uppercase">
+          <i class="fad fa-box-full"></i>
+          <!-- prettier-ignore -->
+          <span class="text-success">Free</span> delivery on orders over €
+          {{ free_delivery_threshold }}!
+        </h5>
+      </div>
     </header>
 
     <!-- TOAST MESSAGES -->

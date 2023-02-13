@@ -48,6 +48,9 @@ INSTALLED_APPS = [
 
     # Project apps
     'home',
+
+    # Packages
+    'crispy_forms',
 ]
 
 MIDDLEWARE = [
@@ -70,6 +73,8 @@ AUTHENTICATION_BACKENDS = [
 
 ROOT_URLCONF = 'tourbillon.urls'
 
+CRISPY_TEMPLATE_PACK = "bootstrap4"
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
@@ -84,6 +89,11 @@ TEMPLATES = [
                 'django.template.context_processors.request',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
+                "django.template.context_processors.media",
+            ],
+            "builtins": [
+                "crispy_forms.templatetags.crispy_forms_tags",
+                "crispy_forms.templatetags.crispy_forms_field",
             ],
         },
     },

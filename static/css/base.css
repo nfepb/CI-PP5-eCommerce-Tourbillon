@@ -175,6 +175,17 @@ footer h6,
     border-bottom-color: #343a40 !important;
 }
 
+/***********/
+/* ALLAUTH FORMS */
+
+.allauth-form-inner-content p {
+    margin-top: 1.5rem;
+    color: rgb(56, 56, 56);
+}
+
+.allauth-form-inner-content input::placeholder {
+    color: var(--silver-grey);
+}
 
 /***********/
 /* MEDIA QUERIES */
@@ -292,6 +303,12 @@ footer h6,
 
     .display-mobile {
         display: block !important;
+    }
+}
+
+@media only screen and (max-width: 481px) {
+    .dropdown-account.show {
+        margin-left: -90px;
     }
 }
 
