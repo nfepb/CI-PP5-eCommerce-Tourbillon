@@ -1,12 +1,14 @@
 {% extends "base.html" %} {% block content %}
+<!-- ALLAUTH BASE TEMPLATE -->
 <div class="container header-container">
   <div class="overlay"></div>
   <div class="row">
-    <div class="col-12 col-md-10">
-      <div class="allauth-form-inner-content mt-5 mb-3">
+    <div class="col-12 col-md-6 mt-4">
+      <div class="allauth-form-inner-content">
         {% block inner_content %} {% endblock %}
       </div>
     </div>
   </div>
 </div>
+<!-- END Of ALLAUTH BASE TEMPLATE -->
 {% endblock %}

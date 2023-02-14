@@ -176,15 +176,83 @@ footer h6,
 }
 
 /***********/
+/* HOME PAGE */
+.marquee {
+    height: 40px;
+    overflow: hidden;
+    position: relative;
+    background-color: var(--prussian-blue);
+    color: white;
+}
+
+.marquee h5 {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    line-height: 30px;
+    text-align: center;
+}
+
+.btn-secundary {
+    border: 1px solid black;
+    color: black;
+    font-size: 16px;
+    background-color: white;
+}
+
+.btn-secundary:hover {
+    background-color: var(--prussian-blue);
+    color: white;
+}
+
+/***********/
 /* ALLAUTH FORMS */
+.form-group {
+    margin-bottom: 1rem;
+}
 
 .allauth-form-inner-content p {
     margin-top: 1.5rem;
     color: rgb(56, 56, 56);
 }
 
+.allauth-form-inner-content input {
+    border-color: black;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content label:not([for='id_remember']) {
+    display: none;
+}
+
 .allauth-form-inner-content input::placeholder {
     color: var(--silver-grey);
+}
+
+.allauth-form-inner-content button,
+.allauth-form-inner-content input[type='submit'] {
+    display: inline-block;
+    font-weight: 400;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: var(--prussian-blue);
+    border: 1px solid var(--silver-grey);
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    border-radius: 0;
+}
+
+.allauth-form-inner-content button:hover,
+.allauth-form-inner-content input[type='submit']:hover {
+    color: var(--prussian-blue);
+    background-color: var(--silver-grey);
 }
 
 /***********/
@@ -245,15 +313,8 @@ footer h6,
         font-size: .9rem;
     }
 
-    .btn.btn-outline-black.rounded-0,
-    .btn.btn-black.rounded-0,
-    .btn.btn-outline-black.rounded-0.btn-lg,
-    .btn.btn-black.rounded-0.btn-lg {
+    .btn {
         padding: .6rem 1rem;
-    }
-
-    .btn.btn-outline-black.rounded-0.btn-lg,
-    .btn.btn-black.rounded-0.btn-lg {
         font-size: .75rem;
         margin-bottom: 20px;
         width: 190px;
