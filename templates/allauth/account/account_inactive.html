@@ -1,11 +1,15 @@
 {% extends "account/base.html" %}
-
+<!-- prettier-ignore -->
 {% load i18n %}
 
 {% block head_title %}{% trans "Account Inactive" %}{% endblock %}
-
+<!-- prettier-ignore -->
 {% block content %}
-<h1>{% trans "Account Inactive" %}</h1>
+<div class="col-lg-6">
+  <hr />
+  <h2 class="mb-4">{% trans "Account Inactive" %}</h2>
+  <hr />
 
-<p>{% trans "This account is inactive." %}</p>
+  <p>{% trans "This account is inactive." %}</p>
+</div>
 {% endblock %}

@@ -29,10 +29,12 @@
       value="{{ redirect_field_value }}"
     />
     {% endif %}
-    <a class="btn btn-secundary rounded-0" href="{% url 'account_login' %}"
+    <a
+      class="btn btn-outline-secondary rounded-1"
+      href="{% url 'account_login' %}"
       >Back to Login</a
     >
-    <button type="submit">{% trans "Sign Up" %}</button>
+    <button class="btn rounded-1" type="submit">{% trans "Sign Up" %}</button>
   </form>
 </div>
 <!-- END Of SIGNUP SECTION -->

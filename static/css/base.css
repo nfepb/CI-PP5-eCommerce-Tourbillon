@@ -48,6 +48,11 @@ i {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
+    background-color: whitesmoke;
+}
+
+header {
+    background-color: whitesmoke;
 }
 
 /***********/
@@ -71,8 +76,8 @@ body {
 /* NAVBAR */
 
 .navbar-expand-lg {
-    background-color: var(--silver-grey);
-    margin-top: 3.75em;
+    background-color: whitesmoke;
+    margin-top: 1.2em;
     padding: 0;
 }
 
@@ -89,7 +94,7 @@ body {
 }
 
 .navbar-nav .nav-link:hover {
-    background-color: var(--prussian-blue);
+    background-color: whitesmoke;
     color: var(--silver-grey) !important;
 }
 
@@ -192,6 +197,17 @@ footer h6,
     margin: 0;
     line-height: 30px;
     text-align: center;
+}
+
+.btn-style {
+    color: whitesmoke;
+    background-color: var(--prussian-blue);
+}
+
+.btn-style:hover {
+    color: var(--prussian-blue);
+    background-color: whitesmoke;
+    border: 1px solid var(--prussian-blue);
 }
 
 .btn-secundary {
@@ -311,13 +327,6 @@ footer h6,
 
     #delivery-banner h4 {
         font-size: .9rem;
-    }
-
-    .btn {
-        padding: .6rem 1rem;
-        font-size: .75rem;
-        margin-bottom: 20px;
-        width: 190px;
     }
 
     .increment-qty,

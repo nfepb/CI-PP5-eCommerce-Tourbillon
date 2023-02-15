@@ -1,38 +1,57 @@
-{% extends "account/base.html" %}
+{% extends "account/base.html" %} {% load i18n %}
 <!-- prettier-ignore -->
-{% load i18n %}
-{% load account %}
+{% load account socialaccount %} {% block head_title %}{% trans "Sign In" %}
 <!-- prettier-ignore -->
-{% block head_title %}{% trans "Confirm E-mail Address" %}{% endblock %}
-{% block inner_content %}
-<!-- EMAIL CONFIRMATION SECTION -->
+{% endblock %} {% block inner_content %}
+<!-- LOGIN SECTION -->
 <div>
   <hr />
-  <h2 class="logo-font mb-4">{% trans "Confirm E-mail Address" %}</h2>
+  <h2 class="logo-font mb-4">{% trans "Sign In" %}</h2>
   <hr />
-  {% if confirmation %}
+  {% get_providers as socialaccount_providers %}
   <!-- prettier-ignore -->
-  {% user_display confirmation.email_address.user as user_display %}
+  {% if socialaccount_providers %}
   <p>
-    {% blocktrans with confirmation.email_address.email as email %}Please
-    confirm that <a href="mailto:{{ email }}">{{ email }}</a> is an e-mail
-    address for user {{ user_display }}.{% endblocktrans %}
+    {% blocktrans with site.name as site_name %}Please sign in with one of your
+    existing third party accounts. Or,
+    <a href="{{ signup_url }}">sign up</a> for a {{ site_name }} account and
+    sign in below:{% endblocktrans %}
   </p>
-  <form
-    method="post"
-    action="{% url 'account_confirm_email' confirmation.key %}"
-  >
-    {% csrf_token %}
-    <button type="submit">{% trans 'Confirm' %}</button>
-  </form>
-  {% else %} {% url 'account_email' as email_url %}
+  <div class="socialaccount_ballot">
+    <ul class="socialaccount_providers">
+      <!-- prettier-ignore -->
+      {% include "socialaccount/snippets/provider_list.html" with process="login" %}
+    </ul>
+    <div class="login-or">{% trans 'or' %}</div>
+  </div>
+  {% include "socialaccount/snippets/login_extra.html" %} {% else %}
   <p>
-    {% blocktrans %}This e-mail confirmation link expired or is invalid. Please
-    <a href="{{ email_url }}">issue a new e-mail confirmation request</a>.
-    <!-- prettier-ignore -->
-    {% endblocktrans %}
+    {% blocktrans %}If you have not created an account yet, then please
+    <a href="{{ signup_url }}">sign up</a> first.{% endblocktrans %}
   </p>
   {% endif %}
+  <form class="login" method="POST" action="{% url 'account_login' %}">
+    {% csrf_token %} {{ form|crispy }} {% if redirect_field_value %}
+    <input
+      type="hidden"
+      name="{{ redirect_field_name }}"
+      value="{{ redirect_field_value }}"
+    />
+    {% endif %}
+    <a class="btn btn-outline-secondary rounded-1" href="{% url 'home' %}"
+      >Home</a
+    >
+    <button class="primaryAction rounded-1" type="submit">
+      {% trans "Sign In" %}
+    </button>
+    <p class="mt-2">
+      <a
+        class="button secondaryAction"
+        href="{% url 'account_reset_password' %}"
+        >{% trans "Forgot Password?" %}</a
+      >
+    </p>
+  </form>
 </div>
-<!-- END OF EMAIL CONFIRMATION SECTION -->
+<!-- END OF LOGIN SECTION -->
 {% endblock %}
