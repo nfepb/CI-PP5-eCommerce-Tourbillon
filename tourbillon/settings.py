@@ -48,6 +48,7 @@ INSTALLED_APPS = [
 
     # Project apps
     'home',
+    'products',
 
     # Packages
     'crispy_forms',
