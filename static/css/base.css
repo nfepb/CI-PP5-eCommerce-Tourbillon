@@ -76,6 +76,18 @@ header {
     color: var(--prussian-blue);
 }
 
+.pacific-blue {
+    color: var(--pacific-blue);
+}
+
+.cafe-brown {
+    color: var(--cafe-noir);
+}
+
+.btn {
+    --bs-btn-border-radius: 0 !important;
+}
+
 /***********/
 /* NAVBAR */
 
@@ -139,6 +151,32 @@ footer h6,
     cursor: pointer;
 }
 
+/* Modal */
+.modal-title {
+    color: var(--prussian-blue);
+    text-decoration: overline;
+}
+
+.modal-header {
+    background-color: whitesmoke;
+    border: none;
+}
+
+.modal-header .close {
+    margin: -2rem -1.5rem -1.5rem auto;
+    background-color: black;
+    padding: 2px;
+    color: whitesmoke;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%
+}
+
+.modal-header .close:hover {
+    background-color: whitesmoke;
+    color: black;
+}
+
 /* from CSS-tricks.com: https://css-tricks.com/snippets/css/css-triangle/ */
 .arrow-up {
     width: 0;
@@ -186,6 +224,20 @@ footer h6,
 
 /***********/
 /* HOME PAGE */
+.icon {
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
 .marquee {
     height: 40px;
     overflow: hidden;
@@ -237,8 +289,20 @@ footer h6,
 /***********/
 /* PRODUCTS DETAILS PAGE */
 .product-details-img {
-    max-height: 500px;
-    max-width: auto;
+    max-height: 31.25rem;
+    width: auto;
+}
+
+.product-name {
+    text-transform: uppercase;
+    font-family: 'Lato', sans-serif;
+}
+
+.sub-title {
+    font-size: 2rem;
+    color: var(--text-black);
+    font-weight: 500;
+    padding: 15px 0;
 }
 
 /***********/
@@ -348,14 +412,13 @@ footer h6,
         font-size: .9rem;
     }
 
-    .increment-qty,
-    .decrement-qty {
-        padding: .25rem .5rem !important;
-    }
-
     .navbar-expand-lg {
         margin-top: 0px;
         padding: 10px 15px;
+    }
+
+    .img-magnifier-container {
+        text-align: center;
     }
 }
 
@@ -392,6 +455,10 @@ footer h6,
 
     .display-mobile {
         display: block !important;
+    }
+
+    .modal-title {
+        font-size: 1.7rem;
     }
 }
 
