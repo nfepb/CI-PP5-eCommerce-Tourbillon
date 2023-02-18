@@ -1,68 +1,127 @@
 <!-- MAIN NAVBAR -->
 <div class="collapse navbar-collapse" id="main-nav">
-    <ul class="navbar-nav w-auto mb-2 mb-lg-0 mx-auto">
-       <li class="nav-item">
-          <a class="nav-link fw-bold mr-5" href="{% url 'home' %}">
-          Home
-          </a>
-       </li>
-       <li class="nav-item dropdown">
-          <a class="fw-bold nav-link dropdown-toggle mr-5" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          All Products
-          </a>
-          <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
-             <a href="" class="dropdown-item">By Price</a>
-             <a href="" class="dropdown-item ">By Rating</a>
-             <a href="" class="dropdown-item ">By Category</a>
-             <a href="" class="dropdown-item">All Products</a>
-          </div>
-       </li>
-       <li class="nav-item dropdown">
-          <a class="fw-bold nav-link dropdown-toggle mr-5" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Watches
-          </a>
-          <div class="dropdown-menu border-0" aria-labelledby="category-link">
-             <a href="" class="dropdown-item">Automatic Watches</a>
-             <a href="" class="dropdown-item">Classic Watches</a>
-             <a href="" class="dropdown-item">Tourbillon Watches</a>
-             <a href="" class="dropdown-item">All Watches</a>
-          </div>
-       </li>
-       <li class="nav-item dropdown">
-          <a class="fw-bold nav-link dropdown-toggle mr-5" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Gender
-          </a>
-          <div class="dropdown-menu border-0" aria-labelledby="gender-link">
-             <a href="" class="dropdown-item">Ladies</a>
-             <a href="" class="dropdown-item">Mens</a>
-             <a href="" class="dropdown-item">All Watches</a>
-          </div>
-       </li>
-       <li class="nav-item dropdown">
-          <a class="fw-bold nav-link dropdown-toggle mr-5" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          Special Offers
-          </a>
-          <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-             <a href="" class="dropdown-item">New Arrivals</a>
-             <a href="" class="dropdown-item">Sales</a>
-             <a href="" class="dropdown-item">Coming Soon</a>
-             <a href="" class="dropdown-item">All Specials</a>
-          </div>
-       </li>
-       <li class="nav-item dropdown">
-          <a class="fw-bold nav-link dropdown-toggle mr-5" href="#" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-          More
-          </a>
-          <div class="dropdown-menu border-0" aria-labelledby="additional-link">
-             <a href="" aria-label="Go to the reviews page" class="dropdown-item">Customer Reviews</a>
-             {% if user.is_authenticated or user.is_superuser %}
-             <a href="" aria-label="Go to the add review page" class="dropdown-item">Add Review</a>
-             {% else %}
-             {% endif %}
-             <a href="" class="dropdown-item" target="_blank" rel="noopener">Privacy Policy</a>
-             <a href="/" class="dropdown-item">About</a>
-          </div>
-       </li>
-    </ul>
- </div>
- <!-- END OF MAIN NAVBAR -->
+  <ul class="navbar-nav w-auto mb-2 mb-lg-0 mx-auto">
+    <li class="nav-item">
+      <a class="nav-link fw-bold mr-5" href="{% url 'home' %}"> Home </a>
+    </li>
+    <li class="nav-item dropdown">
+      <a
+        class="fw-bold nav-link dropdown-toggle mr-5"
+        href="#"
+        data-bs-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        All Products
+      </a>
+      <div class="dropdown-menu border-0" aria-labelledby="all-products-link">
+        <a
+          href="{% url 'products' %}?sort=price&direction=asc"
+          class="dropdown-item"
+          >By Price</a
+        >
+        <a
+          href="{% url 'products' %}?sort=rating&direction=desc"
+          class="dropdown-item"
+          >By Rating</a
+        >
+        <a
+          href="{% url 'products' %}?sort=category&direction=asc"
+          class="dropdown-item"
+          >By Category</a
+        >
+        <a href="{% url 'products' %}" class="dropdown-item">All Products</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a
+        class="fw-bold nav-link dropdown-toggle mr-5"
+        href="#"
+        data-bs-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Watches
+      </a>
+      <div class="dropdown-menu border-0" aria-labelledby="category-link">
+        <a href="{% url 'products' %}?category=Automatic" class="dropdown-item"
+          >Automatic Watches</a
+        >
+        <a href="" class="dropdown-item">Classic Watches</a>
+        <a href="" class="dropdown-item">Tourbillon Watches</a>
+        <a href="" class="dropdown-item">All Watches</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a
+        class="fw-bold nav-link dropdown-toggle mr-5"
+        href="#"
+        data-bs-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Gender
+      </a>
+      <div class="dropdown-menu border-0" aria-labelledby="gender-link">
+        <a
+          href="{% url 'products' %}?gender_category=For%20her"
+          class="dropdown-item"
+          >For her</a
+        >
+        <a
+          href="{% url 'products' %}?gender_category=For%20him"
+          class="dropdown-item"
+          >For him</a
+        >
+        <a
+          href="{% url 'products' %}?gender_category=For%20her,For%20him"
+          class="dropdown-item"
+          >All Watches</a
+        >
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a
+        class="fw-bold nav-link dropdown-toggle mr-5"
+        href="#"
+        data-bs-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        Special Offers
+      </a>
+      <div class="dropdown-menu border-0" aria-labelledby="specials-link">
+        <a href="" class="dropdown-item">New Arrivals</a>
+        <a href="" class="dropdown-item">Sales</a>
+        <a href="" class="dropdown-item">Coming Soon</a>
+        <a href="" class="dropdown-item">All Specials</a>
+      </div>
+    </li>
+    <li class="nav-item dropdown">
+      <a
+        class="fw-bold nav-link dropdown-toggle mr-5"
+        href="#"
+        data-bs-toggle="dropdown"
+        aria-haspopup="true"
+        aria-expanded="false"
+      >
+        More
+      </a>
+      <div class="dropdown-menu border-0" aria-labelledby="additional-link">
+        <a href="" aria-label="Go to the reviews page" class="dropdown-item"
+          >Customer Reviews</a
+        >
+        {% if user.is_authenticated or user.is_superuser %}
+        <a href="" aria-label="Go to the add review page" class="dropdown-item"
+          >Add Review</a
+        >
+        {% else %} {% endif %}
+        <a href="" class="dropdown-item" target="_blank" rel="noopener"
+          >Privacy Policy</a
+        >
+        <a href="/" class="dropdown-item">About</a>
+      </div>
+    </li>
+  </ul>
+</div>
+<!-- END OF MAIN NAVBAR -->

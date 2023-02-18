@@ -1,3 +1,4 @@
+"""views for home app"""
 from django.shortcuts import render
 
 

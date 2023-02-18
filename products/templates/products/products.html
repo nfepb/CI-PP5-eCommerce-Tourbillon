@@ -59,7 +59,7 @@
             {% if product.image %}
             <!-- Product image -->
             <a
-              href=""
+              href="{% url 'product_details' product.id %}"
               aria-label="Go to the products details page {{ product.name }}"
               class="text-center"
             >
@@ -70,7 +70,10 @@
               />
             </a>
             {% else %}
-            <a href="" aria-label="Go to the {{ product.name }} details page">
+            <a
+              href="{% url 'product_details' product.id %}"
+              aria-label="Go to the {{ product.name }} details page"
+            >
               <img
                 class="card-img-top img-fluid"
                 src="{{ MEDIA_URL }}noimage.png"
@@ -121,8 +124,8 @@
                   {% endif %}
                   <div>
                     <a
-                      href=""
-                      aria-label="Go to the  {{ product.name }} details page"
+                      href="{% url 'product_details' product.id %}"
+                      aria-label="Go to the {{ product.name }} details page"
                       class="btn btn-secundary rounded-1 mt-2"
                       >Add to bag</a
                     >
@@ -131,7 +134,7 @@
                   <hr />
                   <div class="text-center mt-3">
                     <a
-                      href=""
+                      href="{% url 'product_details' product.id %}"
                       aria-label="Go to the {{ product.name }} edit page"
                       class="btn btn-edit btn-sm btn-secondary mb-3 rounded-1"
                       >Edit</a

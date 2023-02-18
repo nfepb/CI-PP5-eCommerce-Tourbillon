@@ -235,6 +235,13 @@ footer h6,
 }
 
 /***********/
+/* PRODUCTS DETAILS PAGE */
+.product-details-img {
+    max-height: 500px;
+    max-width: auto;
+}
+
+/***********/
 /* ALLAUTH FORMS */
 .form-group {
     margin-bottom: 1rem;
@@ -391,6 +398,16 @@ footer h6,
 @media only screen and (max-width: 481px) {
     .dropdown-account.show {
         margin-left: -90px;
+    }
+}
+
+@media only screen and (max-width: 433px) {
+    .header-container {
+        padding-top: 120px;
+    }
+
+    .sub-title {
+        font-size: 1.5rem;
     }
 }
 
