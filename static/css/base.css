@@ -72,6 +72,10 @@ header {
     font-family: 'Monsieur La Doulaise', cursive;
 }
 
+.prussian-blue {
+    color: var(--prussian-blue);
+}
+
 /***********/
 /* NAVBAR */
 
@@ -214,12 +218,20 @@ footer h6,
     border: 1px solid black;
     color: black;
     font-size: 16px;
-    background-color: white;
+    background-color: whitesmoke;
 }
 
 .btn-secundary:hover {
     background-color: var(--prussian-blue);
-    color: white;
+    color: whitesmoke;
+    opacity: 0.9 !important;
+}
+
+/***********/
+/* PRODUCTS PAGE */
+.product-img {
+    height: 270px;
+    width: auto;
 }
 
 /***********/
