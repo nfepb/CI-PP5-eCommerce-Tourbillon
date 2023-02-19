@@ -55,6 +55,10 @@ header {
     background-color: whitesmoke;
 }
 
+hr {
+    color: var(--prussian-blue);
+}
+
 /***********/
 /* BASE.HTML */
 
@@ -305,6 +309,21 @@ footer h6,
     padding: 15px 0;
 }
 
+.overlay {
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    background: white;
+    z-index: -1;
+}
+
+a.category-badge>span.badge:hover {
+    background: var(--prussian-blue) !important;
+    color: whitesmoke !important;
+}
+
 /***********/
 /* ALLAUTH FORMS */
 .form-group {
@@ -365,7 +384,7 @@ footer h6,
 
 @media (min-width: 992px) {
     .header-container {
-        padding-top: 164px;
+        padding-top: 102px;
     }
 
     .topnav {
@@ -430,6 +449,10 @@ footer h6,
         flex-direction: column !important;
     }
 
+    .header-container {
+        padding-top: 64px;
+    }
+
     #footer ul li,
     #footer .sub-title,
     #footer p {
@@ -469,10 +492,6 @@ footer h6,
 }
 
 @media only screen and (max-width: 433px) {
-    .header-container {
-        padding-top: 120px;
-    }
-
     .sub-title {
         font-size: 1.5rem;
     }

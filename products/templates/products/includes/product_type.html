@@ -1,0 +1,45 @@
+{% load static %} {% block content %}
+<div class="row">
+  <div class="col text-center mt-3">
+    <h2 class="sub-title">Products</h2>
+    {% for current in current_categories %}
+    <a
+      class="category-badge text-decoration-none"
+      href="{% url 'products' %}?category={{ current.name | urlencode }}"
+    >
+      <span class="p-2 mt-2 badge rounded-1 border text-black"
+        >{{ current.friendly_name }}</span
+      >
+    </a>
+    {% endfor %} {% for current in current_gender_category %}
+    <a
+      class="category-badge text-decoration-none"
+      href="{% url 'products' %}?gender_category={{ current.name | urlencode }}"
+    >
+      <span class="p-2 mt-2 badge rounded-1 border text-black"
+        >{{ current.friendly_name }}</span
+      >
+    </a>
+    {% endfor %} {% for current in current_product_status %}
+    <a
+      class="category-badge text-decoration-none"
+      href="{% url 'products' %}?product_status={{ current.name | urlencode }}"
+    >
+      <span class="p-2 mt-2 badge rounded-1 border text-black"
+        >{{ current.friendly_name }}</span
+      >
+    </a>
+    {% endfor %}{% for current in current_brand %}
+    <a
+      class="category-badge text-decoration-none prussian-blue"
+      href="{% url 'products' %}?product_status={{ current.name | urlencode }}"
+    >
+      <span class="p-2 mt-2 badge rounded-1 border text-black"
+        >{{ current.friendly_name }}</span
+      >
+    </a>
+    {% endfor %}
+    <hr class="w-50 mb-1 prussian-blue" />
+  </div>
+</div>
+{% endblock content %}
