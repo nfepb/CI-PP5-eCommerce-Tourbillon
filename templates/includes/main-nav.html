@@ -64,17 +64,17 @@
       </a>
       <div class="dropdown-menu border-0" aria-labelledby="gender-link">
         <a
-          href="{% url 'products' %}?gender_category=For%20her"
+          href="{% url 'products' %}?gender_category=for-her"
           class="dropdown-item"
           >For her</a
         >
         <a
-          href="{% url 'products' %}?gender_category=For%20him"
+          href="{% url 'products' %}?gender_category=for-him"
           class="dropdown-item"
           >For him</a
         >
         <a
-          href="{% url 'products' %}?gender_category=For%20her,For%20him"
+          href="{% url 'products' %}?gender_category=for-her,for-him"
           class="dropdown-item"
           >All Watches</a
         >
@@ -91,8 +91,14 @@
         Special Offers
       </a>
       <div class="dropdown-menu border-0" aria-labelledby="specials-link">
-        <a href="" class="dropdown-item">New Arrivals</a>
-        <a href="" class="dropdown-item">Sales</a>
+        <a href="{% url 'products' %}?product_status=New" class="dropdown-item"
+          >New Arrivals</a
+        >
+        <a
+          href="{% url 'products' %}?product_status=available"
+          class="dropdown-item"
+          >In Stock</a
+        >
         <a href="" class="dropdown-item">Coming Soon</a>
         <a href="" class="dropdown-item">All Specials</a>
       </div>
