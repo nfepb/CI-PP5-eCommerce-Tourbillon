@@ -325,6 +325,13 @@ a.category-badge>span.badge:hover {
 }
 
 /***********/
+/* BAG PAGE */
+.shopping-bag-img {
+    max-height: 10.625rem;
+    width: auto;
+}
+
+/***********/
 /* ALLAUTH FORMS */
 .form-group {
     margin-bottom: 1rem;

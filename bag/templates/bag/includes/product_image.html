@@ -1,0 +1,13 @@
+{% if item.product.image %}
+<img
+  class="img-fluid rounded bag-item-img"
+  src="{{ item.book.image.url }}"
+  alt="{{ item.product.name }} image"
+/>
+{% else %}
+<img
+  class="img-fluid rounded bag-item-img"
+  src="{{ MEDIA_URL }}noimage.png"
+  alt="{{ item.product.name }} image missing"
+/>
+{% endif %}
