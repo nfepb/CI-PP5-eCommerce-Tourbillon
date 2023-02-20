@@ -1,4 +1,8 @@
-<form class="form update-form pb-3" method="POST" action="">
+<form
+  class="form update-form pb-3"
+  method="POST"
+  action="{% url 'adjust_bag' item.item_id %}"
+>
   {% csrf_token %}
   <div class="qty-btns input-group-prepend w-50">
     <button

@@ -74,7 +74,11 @@
           {% endif %}
         </div>
         <div class="mt-3 fw-light">{{ product.description | safe }}</div>
-        <form class="form" action="" method="POST">
+        <form
+          class="form"
+          action="{% url 'add_to_bag' product.id %}"
+          method="POST"
+        >
           {% csrf_token %}
           <div class="form-row py-3">
             {% with product.has_sizes as s %} {% if s %}

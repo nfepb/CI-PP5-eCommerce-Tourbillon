@@ -1,6 +1,7 @@
 """Views for bag app"""
 from django.shortcuts import (
-    render, redirect, get_object_or_404
+    render, redirect, reverse, 
+    HttpResponse, get_object_or_404
     )
 from django.contrib import messages
 
@@ -72,3 +73,100 @@ def add_to_bag(request, item_id):
 # Overwrites the variable in the session with updated version
     request.session["bag"] = bag
     return redirect(redirect_url)
+
+
+def adjust_bag(request, item_id):
+    """
+    Adjust the quantity of the specified product to the specified amount
+    """
+
+    product = get_object_or_404(Product, pk=item_id)
+    quantity = int(request.POST.get("quantity"))
+    size = None
+    if "product_size" in request.POST:
+        size = request.POST["product_size"]
+    # If there is a bag variable in the session, adds to dictionnary,
+    # if not, creates one
+    bag = request.session.get("bag", {})
+
+    if size:
+        # if item is already in bag:
+        if quantity > 0:
+            # Drill items by size dictionnary,
+            # find specific size, update qty
+            bag[item_id]["items_by_size"][size] = quantity
+            messages.success(
+                request,
+                (
+                    f"Updated size {size.upper()} "
+                    f"{product.name} quantity to "
+                    f'{bag[item_id]["items_by_size"][size]}'
+                ),
+            )
+        else:
+            # Remove item if qty = 0
+            del bag[item_id]["items_by_size"][size]
+            if not bag[item_id]["items_by_size"]:
+                bag.pop(item_id)
+            messages.success(
+                request,
+                (f"""Removed size {size.upper()}
+                {product.name} from your bag"""),
+            )
+    else:
+        if quantity > 0:
+            bag[item_id] = quantity
+            messages.success(
+                request, (f"""
+                Updated {product.name}
+                quantity to {bag[item_id]}""")
+            )
+        else:
+            # # Remove item if qty = 0
+            bag.pop(item_id)
+            messages.success(
+                request,
+                (f"""
+                 Removed {product.name} from your bag"""))
+
+    # Overwrites the variable in the session with updated version
+    request.session["bag"] = bag
+    return redirect(reverse("view_bag"))
+
+
+def remove_from_bag(request, item_id):
+    """
+    Remove the item from the shopping bag.
+    No qty needed as intended qty is 0.
+    """
+    try:
+        # If size is in POST, we want to remove item size key
+        # in items by size dictionnary.
+        product = get_object_or_404(Product, pk=item_id)
+        size = None
+        if "product_size" in request.POST:
+            size = request.POST["product_size"]
+        bag = request.session.get("bag", {})
+
+        if size:
+            del bag[item_id]["items_by_size"][size]
+            if not bag[item_id]["items_by_size"]:
+                bag.pop(item_id)
+            messages.success(
+                request,
+                (f"""
+                Removed size {size.upper()}
+                {product.name} from your bag"""),
+            )
+        else:
+            bag.pop(item_id)
+            messages.success(request, f"Removed {product.name} from your bag")
+
+        request.session["bag"] = bag
+        # 200 http return because view posted from JS function.
+        return HttpResponse(status=200)
+
+    except Exception as e:
+        # Return 500 error in case anything goes wrong.
+        messages.error(request, f"Error removing item: {e}")
+        return HttpResponse(status=500)
