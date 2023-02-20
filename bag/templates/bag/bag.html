@@ -1,5 +1,7 @@
-{% extends "base.html" %} {% load static %} {% block extra_title %} | Shopping
-Bag{% endblock %}
+{% extends "base.html" %} {% load static %}{% load bag_tools %}
+
+<!-- prettier-ignore -->
+{% block extra_title %} | Bag{% endblock %}
 
 <!-- prettier-ignore -->
 {% block page_header %}
@@ -20,7 +22,7 @@ Bag{% endblock %}
   </div>
   <div class="row">
     <div class="col">
-      {% if shopping_bag_items %}
+      {% if bag_items %}
       <div class="d-block d-md-none">
         <!-- Back to top btn -->
 
@@ -145,5 +147,4 @@ Bag{% endblock %}
   </div>
 </div>
 <!-- END BAG SECTION -->
-
-{% endblock %}
+{% include 'products/includes/script.html' %} {% endblock %}

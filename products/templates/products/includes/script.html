@@ -3,14 +3,17 @@
     var selector = $(this);
     var currentUrl = new URL(window.location);
 
+    // Gets the selected option element
     var selectedVal = selector.val();
     if (selectedVal != "reset") {
       var sort = selectedVal.split("_")[0];
       var direction = selectedVal.split("_")[1];
 
+      // Retrieves info from the select box parameter
       currentUrl.searchParams.set("sort", sort);
       currentUrl.searchParams.set("direction", direction);
 
+      // Reloads the page to display the products accordingly
       window.location.replace(currentUrl);
     } else {
       currentUrl.searchParams.delete("sort");

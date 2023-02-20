@@ -25,10 +25,8 @@ def bag_contents(request):
             product = get_object_or_404(Product, pk=item_id)
             total += item_data * product.price
             product_count += item_data
-            """
-            Adds dictionnary to list of bag items to give access to
-            other fields when iterating through itesmmseg. image)
-            """
+# Adds dictionnary to list of bag items to give access to
+# other fields when iterating through itesmmseg. image)
             bag_items.append({
                 'item_id': item_id,
                 'quantity': item_data,
@@ -56,6 +54,7 @@ def bag_contents(request):
 
     grand_total = delivery + total
 
+# Make items available throughout the app
     context = {
         "bag_items": bag_items,
         "total": total,
