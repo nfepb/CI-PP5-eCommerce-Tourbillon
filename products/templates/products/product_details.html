@@ -165,12 +165,10 @@
         </form>
       </div>
     </div>
-    <div>
-      <!-- WISHLIST IF RULES  -->
-    </div>
+    <div></div>
   </div>
 </div>
-{% include 'products/includes/wishlist_modal.html' %}
+<!-- WISHLIST IF RULES  -->
 <div class="container">
   <div class="row">
     <div class="col">
@@ -197,6 +195,8 @@
 <!-- PRODUCTS FEATURED CAROUSEL -->
 <!-- END PRODUCTS FEATURED CAROUSEL -->
 {% endblock %} {% block postloadjs %} {{ block.super }}
+<!-- prettier-ignore -->
 <!-- QUANTITY INPUT SCRIPT -->
+{% include 'products/includes/quantity_input_script.html' %}
 <!-- END QUANTITY INPUT SCRIPT -->
 {% endblock %}

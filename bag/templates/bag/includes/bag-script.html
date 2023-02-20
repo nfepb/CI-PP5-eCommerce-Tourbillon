@@ -1,6 +1,37 @@
-<script>
+<script type="text/javascript">
+  /*
+   * bag/bag_script.html - js file for incr/decr of items
+   * to be inserted into the users bag. Credit: Code Institute, Boutique Ado project
+   */
+
+  // Update qty on click
+  $(".update-link").click(function (e) {
+    let form = $(this).prev(".update-form");
+    form.submit();
+  });
+
+  // Remove item and reload on click
+  $(`.remove-item`).click(function (e) {
+    let csrfToken = "{{ csrf_token }}";
+    // Splits the itemId of update link being clicked on and taking 2nd half of it
+    let itemId = $(this).attr("id").split("remove_")[1];
+    let size = $(this).data("product_size");
+    let url = `/bag/remove/${itemId}/`;
+    // Match the CSRF token expected by Django to request.post to server
+    let data = {
+      // prettier-ignore
+      'csrfmiddlewaretoken': csrfToken,
+      // prettier-ignore
+      'product_size': size,
+    };
+
+    $.post(url, data).done(function () {
+      location.reload();
+    });
+  });
+
   //Get the button:
-  mybutton = document.getElementById("BagBtn");
+  mybutton = document.getElementById("ShoppingBagBtn");
 
   // When the user scrolls down 20px from the top of the document, show the button
   window.onscroll = function () {

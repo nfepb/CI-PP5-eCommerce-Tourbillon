@@ -221,8 +221,9 @@
 <!-- END PRODUCT SECTION -->
 {% endblock %}
 
+{% block postloadjs %} 
 <!-- SCRIPT SECTION -->
-{% block postloadjs %} {{ block.super }}
+{{ block.super }}
 {% include 'products/includes/script.html' %}
 <!-- END SCRIPT SECTION -->
 {% endblock %}
