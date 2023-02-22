@@ -1,6 +1,6 @@
 """Views for bag app"""
 from django.shortcuts import (
-    render, redirect, reverse, 
+    render, redirect, reverse,
     HttpResponse, get_object_or_404
     )
 from django.contrib import messages
@@ -77,7 +77,7 @@ def add_to_bag(request, item_id):
 
 def adjust_bag(request, item_id):
     """
-    Adjust the quantity of the specified product to the specified amount
+    Adjusts the quantity of the specified products to the shopping bag
     """
 
     product = get_object_or_404(Product, pk=item_id)
@@ -96,30 +96,24 @@ def adjust_bag(request, item_id):
             # find specific size, update qty
             bag[item_id]["items_by_size"][size] = quantity
             messages.success(
-                request,
-                (
-                    f"Updated size {size.upper()} "
-                    f"{product.name} quantity to "
-                    f'{bag[item_id]["items_by_size"][size]}'
-                ),
-            )
+                    request, f"Updated {size.upper()} {product.name} \
+                        to your {bag[item_id]['items_by_size'][size]}"
+                    )
+
         else:
             # Remove item if qty = 0
             del bag[item_id]["items_by_size"][size]
             if not bag[item_id]["items_by_size"]:
                 bag.pop(item_id)
             messages.success(
-                request,
-                (f"""Removed size {size.upper()}
-                {product.name} from your bag"""),
+                request, f"Removed {size.upper()} {product.name} \
+                        from your bag"
             )
     else:
         if quantity > 0:
             bag[item_id] = quantity
             messages.success(
-                request, (f"""
-                Updated {product.name}
-                quantity to {bag[item_id]}""")
+                request, f"Updated {product.name} quantity to {bag[item_id]}"
             )
         else:
             # # Remove item if qty = 0

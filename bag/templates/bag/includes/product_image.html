@@ -1,13 +1,15 @@
+<!-- PRODUT IMAGE -->
 {% if item.product.image %}
 <img
-  class="img-fluid rounded bag-item-img"
-  src="{{ item.book.image.url }}"
+  class="img-fluid rounded"
+  src="{{ item.product.image.url }}"
   alt="{{ item.product.name }} image"
 />
 {% else %}
 <img
-  class="img-fluid rounded bag-item-img"
+  class="img-fluid rounded"
   src="{{ MEDIA_URL }}noimage.png"
   alt="{{ item.product.name }} image missing"
 />
 {% endif %}
+<!-- END PRODUT IMAGE -->

@@ -1,4 +1,4 @@
-<script>
+<script type="text/javascript">
   /*
    * products/quantity_input_script.html - js file for incr/decr of items
    * to be inserted into the users cart. Credit: Code Institute, Boutique Ado project
@@ -6,7 +6,7 @@
 
   // Disables +/- buttons outside range 1-99
   function handleEnableDisable(itemId) {
-    let currentValue = parseInt($(`.id_qty_${itemId}`).val());
+    let currentValue = parseInt($(`#id_qty_${itemId}`).val());
     let minusDisabled = currentValue < 2;
     let plusDisabled = currentValue > 98;
     $(`#decrement-qty_${itemId}`).prop("disabled", minusDisabled);

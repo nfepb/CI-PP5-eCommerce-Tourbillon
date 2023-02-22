@@ -326,7 +326,7 @@ a.category-badge>span.badge:hover {
 
 /***********/
 /* BAG PAGE */
-.shopping-bag-img {
+.bag-item-img {
     max-height: 10.625rem;
     width: auto;
 }
