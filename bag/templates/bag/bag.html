@@ -52,13 +52,6 @@
           </div>
           <div class="col-12 col-sm-6">
             {% include 'bag/includes/quantity_form.html'%}
-            <p class="btn update-link text-info"><small>Update</small></p>
-            <p
-              class="btn remove-item text-danger text-left me-1"
-              id="remove_{{ item.item_id }}"
-            >
-              <small>Delete</small>
-            </p>
           </div>
         </div>
         <div class="row">
@@ -107,14 +100,6 @@
               <!-- Quantity Form -->
               <td class="py-3 w-25">
                 {% include 'bag/includes/quantity_form.html'%}
-
-                <p class="btn update-link text-info"><small>Update</small></p>
-                <p
-                  class="btn delete-item text-danger text-left ms-1"
-                  id="delete_{{ item.item_id }}"
-                >
-                  <small>Delete</small>
-                </p>
               </td>
 
               <td class="py-3">
