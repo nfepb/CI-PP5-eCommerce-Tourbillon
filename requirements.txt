@@ -4,7 +4,9 @@ backports.zoneinfo==0.2.1
 dj-database-url==1.2.0
 Django==3.2.17
 django-allauth==0.52.0
+django-countries==7.5.1
 django-crispy-forms==1.14.0
+django-summernote==0.8.20.0
 gunicorn==20.1.0
 oauthlib==3.2.2
 Pillow==9.4.0
