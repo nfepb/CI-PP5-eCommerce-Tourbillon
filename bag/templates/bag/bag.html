@@ -24,8 +24,6 @@
     <div class="col">
       {% if bag_items %}
       <div class="d-block d-md-none">
-        <!-- Back to top btn -->
-
         <!-- Bag Total -->
         <div class="row">
           <div class="col mb-2">{% include 'bag/includes/bag_total.html'%}</div>
@@ -46,6 +44,9 @@
           </div>
           <div class="col-12 col-sm-6 mb-2">
             <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+            <p class="my-0 small text-muted">
+              SKU: {{ item.product.sku|upper }}
+            </p>
           </div>
           <div class="col-12 col-sm-6">
             <p class="my-0"><strong>€{{ item.product.price }}</strong></p>
@@ -61,8 +62,13 @@
         </div>
         {% endfor %}
         <div>
-          <button onclick="topFunction()" id="ShoppingBagBtn" title="Go to top">
-            Top
+          <button
+            onclick="topFunction()"
+            id="ShoppingBagBtn"
+            title="Go to top"
+            class="btn btn-outline-info"
+          >
+            <i class="fas fa-arrow-to-top"></i>
           </button>
         </div>
       </div>
@@ -90,6 +96,13 @@
               <!-- Product Info -->
               <td class="py-3">
                 <p class="my-0"><strong>{{ item.product.name }}</strong></p>
+                <p class="my-0">
+                  <strong>Size: </strong>
+                  <!-- Product size information -->
+                  {% if item.product.has_sizes %}{{ item.size|upper }}
+                  <!-- prettier-ignore -->
+                  {% else %}N/A{% endif %}
+                </p>
               </td>
 
               <!-- Product Price -->

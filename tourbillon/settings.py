@@ -103,6 +103,9 @@ TEMPLATES = [
     },
 ]
 
+# Store Toast Messages in the session
+MESSAGE_STORAGE = 'django.contrib.messages.storage.session.SessionStorage'
+
 EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
 
 # Registration rules through Allauth
