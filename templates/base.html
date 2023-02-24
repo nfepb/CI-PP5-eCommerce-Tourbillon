@@ -186,7 +186,12 @@
     {% block postloadjs %}
     <!-- JS to display the toast messages -->
     <script type="text/javascript">
-      $(".toast").toast("show");
+      // Display toast messages
+      window.onload = (event)=> {
+            let messageAlert = document.querySelector('.toast');
+            let beAlert = new bootstrap.Toast(messageAlert);
+            beAlert.show();
+        }
 
       // Back to top btn
       let mybutton = document.getElementById("myBtn");

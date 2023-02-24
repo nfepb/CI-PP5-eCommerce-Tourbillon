@@ -13,6 +13,19 @@
 <!-- BAG SECTION -->
 {% block content %}
 <div class="overlay"></div>
+
+<!-- Back to top button -->
+<div>
+  <button
+    onclick="topFunction()"
+    id="myBtn"
+    title="Go to top"
+    class="btn btn-outline-info"
+  >
+    <i class="fas fa-arrow-to-top"></i>
+  </button>
+</div>
+
 <div class="container">
   <div class="row">
     <div class="col text-center">
@@ -61,16 +74,6 @@
           </div>
         </div>
         {% endfor %}
-        <div>
-          <button
-            onclick="topFunction()"
-            id="ShoppingBagBtn"
-            title="Go to top"
-            class="btn btn-outline-info"
-          >
-            <i class="fas fa-arrow-to-top"></i>
-          </button>
-        </div>
       </div>
       <div class="table-responsive rounded mb-5 d-none d-md-block">
         <table class="table table-sm table-borderless">
