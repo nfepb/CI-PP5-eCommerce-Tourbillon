@@ -1,12 +1,12 @@
 """ Views for Checkout app"""
+import stripe
 from django.shortcuts import (
     render, redirect, reverse, get_object_or_404
 )
 from django.contrib import messages
 from django.conf import settings
-import stripe
 
-from .models import OrderLineItem
+from .models import Order, OrderLineItem
 from products.models import Product
 from bag.contexts import bag_contents
 from .forms import OrderForm
@@ -26,8 +26,9 @@ def checkout(request):
             'phone_number': request.POST['phone_number'],
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
-            'street_address_1': request.POST['street_address_1'],
-            'street_address_2': request.POST['street_address_2'],
+            'town_or_city': request.POST['town_or_city'],
+            'street_address1': request.POST['street_address_1'],
+            'street_address2': request.POST['street_address_2'],
             'county': request.POST['county'],
         }
 
