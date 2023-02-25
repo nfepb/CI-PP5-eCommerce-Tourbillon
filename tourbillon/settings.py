@@ -204,6 +204,6 @@ SUMMERNOTE_CONFIG = {
         "airMode": False,
         # Change editor size
         "width": "100%",
-        "height": "480",
+        "height": "360",
     }
 }
