@@ -42,7 +42,7 @@
       <div class="row">
         <div class="col-2 mb-1">
           <a
-            href="{% url 'product_detail' item.product.id %}"
+            href="{% url 'product_details' item.product.id %}"
             aria-label="Go to the product details page"
           >
             {% if item.product.image %}
@@ -171,7 +171,7 @@
           <a
             href="{% url 'view_bag' %}"
             aria-label="Go to the view bag page"
-            class="btn btn-outline-black rounded-0 btn-products"
+            class="btn btn-outline-black rounded-1"
           >
             <span class="icon">
               <i class="fas fa-chevron-left interactive-color"></i>
@@ -180,17 +180,17 @@
           </a>
           <button
             id="submit-button"
-            class="btn btn-black rounded-0 btn-products mt-3 mb-3"
+            class="btn btn-style rounded-0 mt-3 mb-3"
             aria-label="Complete Order"
           >
             <span class="font-weight-bold">Complete Order</span>
             <span class="icon">
-              <i class="fas fa-credit-card interactive-color ml-2"></i>
+              <i class="fas fa-credit-card pacific-blue ml-2"></i>
             </span>
           </button>
           <p class="small text-danger my-0">
             <span class="icon">
-              <i class="fas fa-exclamation-circle interactive-color"></i>
+              <i class="fas fa-exclamation-circle pacific-blue"></i>
             </span>
             <span
               >Your card will be charged
