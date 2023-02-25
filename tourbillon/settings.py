@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
     # Packages
     'crispy_forms',
+    'django_summernote',
 ]
 
 MIDDLEWARE = [
@@ -188,3 +189,21 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 FREE_DELIVERY_THRESHOLD = 3000
 STANDARD_DELIVERY_PERCENTAGE = 5
+
+# Summernote Config from https://github.com/summernote/django-summernote
+SUMMERNOTE_CONFIG = {
+    # Using SummernoteWidget - iframe mode, default
+    # 'iframe': True,
+    # Or, you can set it to `False` to use SummernoteInplaceWidget by default - no iframe mode
+    # In this case, you have to load Bootstrap/jQuery sources and dependencies manually.
+    # Use this when you're already using Bootstrap/jQuery based themes.
+    # 'iframe': False,
+    # You can put custom Summernote settings
+    "summernote": {
+        # As an example, using Summernote Air-mode
+        "airMode": False,
+        # Change editor size
+        "width": "100%",
+        "height": "480",
+    }
+}

@@ -1,5 +1,6 @@
 """ Admin register"""
 from django.contrib import admin
+from django_summernote.admin import SummernoteModelAdmin
 from .models import (
     Product, Brand, Category, GenderCategory,
     ProductStatus
@@ -7,7 +8,7 @@ from .models import (
 
 
 @admin.register(Product)
-class ProductAdmin(admin.ModelAdmin):
+class ProductAdmin(SummernoteModelAdmin):
     """
     Displays the Product model in the admin panel
     """
@@ -28,7 +29,7 @@ class ProductAdmin(admin.ModelAdmin):
 
 
 @admin.register(Brand)
-class BrandAdmin(admin.ModelAdmin):
+class BrandAdmin(SummernoteModelAdmin):
     """
     Displays the Brand model in the admin panel
     """
@@ -39,7 +40,7 @@ class BrandAdmin(admin.ModelAdmin):
 
 
 @admin.register(Category)
-class CategoryAdmin(admin.ModelAdmin):
+class CategoryAdmin(SummernoteModelAdmin):
     """
     Displays the Category model in the admin panel
     """
@@ -50,7 +51,7 @@ class CategoryAdmin(admin.ModelAdmin):
 
 
 @admin.register(GenderCategory)
-class GenderCategoryAdmin(admin.ModelAdmin):
+class GenderCategoryAdmin(SummernoteModelAdmin):
     """
     Displays the Gender Category model in the admin panel
     """
@@ -61,7 +62,7 @@ class GenderCategoryAdmin(admin.ModelAdmin):
 
 
 @admin.register(ProductStatus)
-class ProductStatusAdmin(admin.ModelAdmin):
+class ProductStatusAdmin(SummernoteModelAdmin):
     """
     Displays the Product Status model in the admin panel
     """
