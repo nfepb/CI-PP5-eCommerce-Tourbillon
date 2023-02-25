@@ -96,6 +96,7 @@ TEMPLATES = [
                 # Makes the bag contents available through all the site
                 'bag.contexts.bag_contents',
             ],
+            # List of built ins that we want available in all our templates by default.
             "builtins": [
                 "crispy_forms.templatetags.crispy_forms_tags",
                 "crispy_forms.templatetags.crispy_forms_field",
