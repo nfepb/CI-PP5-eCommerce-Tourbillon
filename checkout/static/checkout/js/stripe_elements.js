@@ -6,9 +6,9 @@ const elements = stripe.elements();
 const appearance = {
   base: {
     color: "#000",
-    fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
+    fontFamily: '"Roboto", sans-serif',
     fontSmoothing: "antialiased",
-    fontSize: "16px",
+    fontSize: "1.2rem",
     "::placeholder": {
       color: "#aab7c4",
     },
