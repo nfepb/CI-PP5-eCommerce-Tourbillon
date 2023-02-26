@@ -2,7 +2,7 @@
 #payment-form .form-control,
 #card-element {
     color: #000;
-    border: 1px solid #000;
+    border: 1px solid var(--prussian-blue) !important;
 }
 
 .fieldset-label {
@@ -72,4 +72,8 @@ select option {
 select:invalid,
 select option[value=""] {
     color: #aab7c4 !important;
+}
+
+body {
+    background-color: 'red';
 }

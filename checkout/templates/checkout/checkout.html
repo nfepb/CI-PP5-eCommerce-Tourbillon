@@ -2,10 +2,6 @@
 
 <!-- Extra Title -->
 {% block extra_title %} | Checkout{% endblock %}
-<!-- CHECKOUT CSS -->
-{% block extra_css %}
-<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" />
-{% endblock %}
 <!-- BLOCK PAGE HEADER -->
 {% block page_header %}
 <div class="container header-container">
@@ -180,7 +176,7 @@
           </a>
           <button
             id="submit-button"
-            class="btn btn-style rounded-0 mt-3 mb-3"
+            class="btn btn-style rounded-1 mt-3 mb-3"
             aria-label="Complete Order"
           >
             <span class="font-weight-bold">Complete Order</span>

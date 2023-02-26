@@ -57,13 +57,15 @@
       href="/static/favicon/favicon-16x16.png"
     />
     <link rel="manifest" href="/static/favicon/site.webmanifest" />
+    <!-- Base CSS -->
+    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
     {% endblock %}
     <!-- END CORE CSS -->
 
     <!-- EXTRA CSS -->
     {% block extra_css %}
-    <!-- Base CSS -->
-    <link rel="stylesheet" href="{% static 'css/base.css' %}" />
+    <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}" />
+
     {% endblock %}
     <!-- END EXTRA CSS -->
 
@@ -95,3 +97,4 @@
 
     <title>Tourbillon {% block extra_title %}{% endblock %}</title>
   </head>
+</html>

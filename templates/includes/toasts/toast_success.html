@@ -78,16 +78,18 @@
           <strong>You got free delivery!</strong>
         </p>
         {% endif %}
-        <a
-          href="{% url 'view_bag' %}"
-          aria-label="Go to the add view bag page"
-          class="btn btn-black btn-block rounded-0"
-        >
-          <span class="text-uppercase">Go To Secure Checkout</span>
-          <span class="icon">
-            <i class="fas fa-lock"></i>
-          </span>
-        </a>
+        <div class="d-grid">
+          <a
+            href="{% url 'view_bag' %}"
+            aria-label="Go to the add view bag page"
+            class="btn btn-dark btn-block rounded-1"
+          >
+            <span class="text-uppercase">Go To Secure Checkout</span>
+            <span class="icon">
+              <i class="fas fa-lock"></i>
+            </span>
+          </a>
+        </div>
       </div>
     </div>
     {% endif %}
