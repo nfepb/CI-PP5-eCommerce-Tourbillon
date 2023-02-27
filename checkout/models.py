@@ -32,6 +32,7 @@ class Order(models.Model):
     grand_total = models.DecimalField(
         max_digits=10, decimal_places=2, null=False, default=0
     )
+    # Make order unique for Success_payment loop in webhook_handlers
     original_bag = models.TextField(null=False, blank=False, default='')
     stripe_pid = models.CharField(
                                   max_length=254,

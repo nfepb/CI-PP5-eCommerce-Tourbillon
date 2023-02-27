@@ -1,5 +1,10 @@
 from django.http import HttpResponse
 
+from .models import Order, OrderLineItem
+from product.models import Product
+
+import json
+import time
 
 class StripeWH_Handler:
     """
@@ -76,11 +81,16 @@ class StripeWH_Handler:
                 order_exists = True
                 break
             except Order.DoesNotExist:
+                """
+                If order not found, increment attempt by 1 & sleep 1 second.
+                Will try to find the order 5 times over 5 seconds.
+                """
                 attempt += 1
                 time.sleep(1)
         if order_exists:
             return HttpResponse(
-                    content=f'Webhook received: {event:["type"]} | SUCCESS: Verified order already in database',
+                    content=f'Webhook received: {event:["type"]} \
+                        | SUCCESS: Verified order already in database',
                     status=200
                 )
 
@@ -132,7 +142,8 @@ class StripeWH_Handler:
                     content=f'Webhook received: {event["type"]} | ERROR: {e}',
                     status=500)
         return HttpResponse(
-            content=f'Webhook received: {event["type"]} | SUCCESS: Created order in webhook',
+            content=f'Webhook received: {event["type"]} \
+                | SUCCESS: Created order in webhook',
             status=200
             )
 
