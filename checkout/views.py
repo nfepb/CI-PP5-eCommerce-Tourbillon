@@ -25,15 +25,16 @@ def checkout(request):
             'phone_number': request.POST['phone_number'],
             'country': request.POST['country'],
             'postcode': request.POST['postcode'],
-            'street_address_1': request.POST['street_address_1'],
-            'street_address_2': request.POST['street_address_2'],
+            'town_or_city': request.POST['town_or_city'],
+            'street_address1': request.POST['street_address1'],
+            'street_address2': request.POST['street_address2'],
             'county': request.POST['county'],
         }
 
         order_form = OrderForm(form_data)
         # If form is_valid, save() form
         if order_form.is_valid():
-            order_form.save()
+            order = order_form.save()
             for item_id, item_data in bag.items():
                 try:
                     # Get product ID from bag
@@ -80,7 +81,7 @@ def checkout(request):
     else:
         bag = request.session.get('bag', {})
         if not bag:
-            message.error(
+            messages.error(
                 request, 'There is nothing in your bag at the moment'
                 )
             return redirect(reverse('products'))
