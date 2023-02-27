@@ -114,7 +114,7 @@
           {{ order_form.county | as_crispy_field }} 
           {{ order_form.postcode | as_crispy_field }} 
           {{ order_form.country | as_crispy_field }}
-          <div class="form-check form-check-inline float-right mr-0">
+          <div class="form-check form-check-inline float-right me-0">
             {% if user.is_authenticated %}
             <label class="form-check-label" for="id-save-info"
               >Save this delivery information to my profile</label
@@ -167,10 +167,10 @@
           <a
             href="{% url 'view_bag' %}"
             aria-label="Go to the view bag page"
-            class="btn btn-outline-black rounded-1"
+            class="btn btn-outline-secondary rounded-1"
           >
             <span class="icon">
-              <i class="fas fa-chevron-left interactive-color"></i>
+              <i class="fas fa-chevron-left pacific-blue"></i>
             </span>
             <span class="font-weight-bold">Adjust Bag</span>
           </a>

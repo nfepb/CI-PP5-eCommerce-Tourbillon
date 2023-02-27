@@ -195,6 +195,7 @@ STANDARD_DELIVERY_PERCENTAGE = 5
 STRIPE_CURRENCY = 'eur'
 STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
 STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
+STRIPE_WH_SECRET = os.getenv('STRIPE_WH_SECRET', '')
 
 # Summernote Config from https://github.com/summernote/django-summernote
 SUMMERNOTE_CONFIG = {
