@@ -3,6 +3,7 @@ from django.http import HttpResponse
 from .models import Order, OrderLineItem
 from products.models import Product
 
+import stripe
 import json
 import time
 
@@ -47,9 +48,9 @@ class StripeWH_Handler:
             intent.latest_charge
         )
 
-        billing_details = intent.charges.data[0].billing_details
+        billing_details = stripe_charge.billing_details
         shipping_details = intent.shipping
-        grand_total = round(intent.charges.data[0].amount / 100, 2)
+        grand_total = round(stripe_charge.amount / 100, 2)
 
         """
         Replace empty strings with 'None'
