@@ -90,7 +90,7 @@ class StripeWH_Handler:
                 time.sleep(1)
         if order_exists:
             return HttpResponse(
-                    content=f'Webhook received: {event:["type"]} \
+                    content=f'Webhook received: {event["type"]} \
                         | SUCCESS: Verified order already in database',
                     status=200
                 )
