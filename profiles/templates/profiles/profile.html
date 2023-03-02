@@ -1,6 +1,7 @@
 {% extends "base.html" %}{% load static %}
 
 <!-- prettier-ignore -->
+{% block extra_title %} | Profile{% endblock %}
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}" />
 {% endblock %}
@@ -19,10 +20,50 @@
   <div class="row">
     <div class="col">
       <hr />
-      <h2 class="logo-font mb-4">My Profile</h2>
+      <h2 class="mb-4 mt-5">My Profile</h2>
       <hr />
     </div>
   </div>
 
-  {% endblock %}
+  <div class="row mb-3">
+    <div class="col-sm-12 col-md-6">
+      <span>
+        <a
+          href="{% url 'account_change_password' %}"
+          class="btn logo-font btn-style rounded-1"
+          >Change your password</a
+        >
+      </span>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-sm-12 col-md-6">
+      <span>
+        <a href="{% url 'account_email' %}" class="btn btn-style rounded-1"
+          >Change your login details</a
+        >
+      </span>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col-sm-12 col-md-6">
+      <p class="text-muted">
+        <i class="fas fa-regular fa-truck me-1"></i>Delivery Details
+      </p>
+      <form action="{% url 'profile' %}" method="POST" id="profile-update-form">
+        {% csrf_token %} {{ form|crispy }}
+        <span
+          ><a
+            href="{% url 'account_overview' %}"
+            class="btn btn-style rounded-1"
+            ><i class="fas fa-chevron-left pe-2"></i>My Account</a
+          ></span
+        >
+        <button class="btn btn-style rounded-1">Update Details</button>
+      </form>
+    </div>
+  </div>
 </div>
+{% endblock %} {% block postloadjs %} {{ block.super }}
+<script src="{% static 'profiles/js/countryfield.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,55 @@
+{% extends 'base.html' %} {% load static %} {% block extra_title %} | Product
+Management{% endblock %} {% block extra_css %}
+<link rel="stylesheet" href="{% static 'profiles/css/profile.css' %}" />
+{% endblock %} {% block page_header %}
+<div class="container header-container">
+  <div class="row">
+    <div class="col"></div>
+  </div>
+</div>
+{% endblock %} {% block content %}
+<div class="overlay"></div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col text-center">
+      <hr />
+      <h2 class="mb-4 mt-5">Product Management</h2>
+      <hr />
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="row mt-4">
+    <div class="col text-center">
+      <a href="{% url 'add_category' %}">
+        <div class="btn btn-style accounts-btns">
+          <span><i class="fa-solid fa-list pr-2"></i></span>
+          Category Management
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col text-center">
+      <a href="{% url 'add_product' %}">
+        <div class="btn logo-font btn-style accounts-btns">
+          <span><i class="fal fa-watch"></i></span>
+          Product Management
+        </div>
+      </a>
+    </div>
+  </div>
+  <div class="row mt-5">
+    <div class="col text-center small mb-2">
+      <a href="{% url 'admin_profile' %}">
+        <div class="btn btn-style">
+          <span><i class="fas fa-arrow-left pr-2"></i></span>
+          Back to Admin Panel
+        </div>
+      </a>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
