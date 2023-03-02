@@ -50,7 +50,7 @@ def account_overview(request):
 
 
 @login_required
-def order_history(request, order_number):
+def order_history(request):
     """ Displays order history """
     profile = get_object_or_404(UserProfile, user=request.user)
     # get all orders under user name
