@@ -58,7 +58,7 @@
                 {% if request.user.is_superuser %}
                 <li>
                   <a
-                    href=""
+                    href="{% url 'add_product' %}"
                     aria-label="Go to the product management page"
                     class="dropdown-item"
                     >Product Management</a

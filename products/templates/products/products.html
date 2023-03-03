@@ -138,7 +138,7 @@
                   <hr />
                   <div class="text-center mt-3">
                     <a
-                      href="{% url 'product_details' product.id %}"
+                      href="{% url 'edit_product' product.id %}"
                       aria-label="Go to the {{ product.name }} edit page"
                       class="btn btn-edit btn-sm btn-secondary mb-3 rounded-1"
                       >Edit</a
@@ -171,16 +171,16 @@
                         <div class="modal-footer">
                           <button
                             type="button"
-                            class="btn btn-secondary"
+                            class="btn btn-secondary rounded-1"
                             data-bs-dismiss="modal"
                             aria-label="Close Modal"
                           >
                             Close
                           </button>
                           <a
-                            href=""
+                            href="{% url 'delete_product' product.id %}"
                             aria-label="Delete {{ product.name }}"
-                            class="btn btn-danger"
+                            class="btn btn-danger rounded-1"
                             >Delete</a
                           >
                         </div>

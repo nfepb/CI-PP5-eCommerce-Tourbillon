@@ -66,7 +66,7 @@
         {% endif %}
         <div class="mb-3">
           <a href="#reviews-section" class="text-decoration-none">
-            <div class="book-rating d-inline">
+            <div class="product-rating d-inline">
               {% include 'products/includes/product_rating.html' %}
             </div>
           </a>
@@ -74,6 +74,21 @@
           <p class="me-3 small d-inline">({{ product.review_count}})</p>
           {% endif %}
         </div>
+        {% if request.user.is_superuser %}
+        <small class="ml-3">
+          <a
+            href="{% url 'edit_product' product.id %}"
+            class="btn btn-secondary btn-sm rounded-1"
+            >Edit</a
+          >
+          |
+          <a
+            href="{% url 'delete_product' product.id %}"
+            class="btn btn-danger btn-sm rounded-1"
+            >Delete</a
+          >
+        </small>
+        {% endif %}
         <div class="mt-3 fw-light">{{ product.description | safe }}</div>
         <form
           class="form"
