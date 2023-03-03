@@ -141,8 +141,8 @@ def checkout(request):
                     'country': profile.default_country,
                     'postcode': profile.default_postcode,
                     'town_or_city': profile.default_town_or_city,
-                    'street_address_1': profile.default_street_address_1,
-                    'street_address_2': profile.default_street_address_2,
+                    'street_address1': profile.default_street_address1,
+                    'street_address2': profile.default_street_address2,
                     'county': profile.default_county,
                 })
             except UserProfile.DoesNotExist:
@@ -189,8 +189,8 @@ def checkout_success(request, order_number):
                 'default_country': order.country,
                 'default_postcode': order.postcode,
                 'default_town_or_city': order.town_or_city,
-                'default_street_address_1': order.street_address_1,
-                'default_street_address_2': order.street_address_2,
+                'default_street_address1': order.street_address1,
+                'default_street_address2': order.street_address2,
                 'default_county': order.county,
             }
             # Create an instance of user_profile form & update data
