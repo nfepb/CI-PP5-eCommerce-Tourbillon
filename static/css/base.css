@@ -370,6 +370,14 @@ a.category-badge>span.badge:hover {
 }
 
 /***********/
+/* WISHLIST PAGE */
+.wishlist-img>a>img {
+    max-height: 80px;
+    width: auto;
+}
+
+
+/***********/
 /* ALLAUTH FORMS */
 .form-group {
     margin-bottom: 1rem;
