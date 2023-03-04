@@ -6,7 +6,7 @@
 >
   {% csrf_token %}
   <div class="form-group">
-    <div class="input-group w-50 input-group-{{ item.item_id }}">
+    <div class="input-group input-group-{{ item.item_id }}">
       <div class="input-group-prepend">
         <button
           class="btn-sm btn-style rounded-1 border-0 decrement-qty decrement-qty_{{ item.item_id }} 
@@ -49,12 +49,12 @@
     </div>
   </div>
 </form>
-<p class="btn update-link text-info"><small>Update</small></p>
-<p
-  class="btn remove-item text-danger text-left me-1"
+<a class="btn update-link text-info"><small>Update</small></a>
+<a
+  class="btn remove-item text-danger float-right"
   id="remove_{{ item.item_id }}"
   data-product_size="{{ item.size }}"
 >
   <small>Remove</small>
-</p>
+</a>
 <!-- END QUANTITY FORM -->

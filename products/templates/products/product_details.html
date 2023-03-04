@@ -1,16 +1,19 @@
-{% extends "base.html" %} {% load static %} {% block extra_title %} |
-{{product.name}} {% endblock %} {% block page_header %}
+{% extends "base.html" %} {% load static %}
+<!-- prettier-ignore -->
+{% block extra_title %} | {{product.name}} {% endblock %} 
+
+{% block page_header %}
 <!-- BLOCK PAGE HEADER -->
 <div class="container header-container">
   <div class="row">
     <div class="col"></div>
   </div>
 </div>
-<!-- END OF BLOCK PAGE HEADER -->
+<!-- END BLOCK PAGE HEADER -->
 {% endblock %} {% block content %}
 <!-- PRODUCT DETAILS SECTION -->
 <div class="overlay"></div>
-<div class="container-fluid mt-3">
+<div class="container-fluid header-container">
   <div class="row">
     <div class="col-12 col-md-6 col-lg-4 offset-lg-2">
       <div class="image-container my-5">
@@ -210,7 +213,7 @@
     </div>
   </div>
 </div>
-<!-- END OF PRODUCT DETAILS SECTION -->
+<!-- END PRODUCT DETAILS SECTION -->
 
 <!-- PRODUCTS FEATURED CAROUSEL -->
 <!-- END PRODUCTS FEATURED CAROUSEL -->

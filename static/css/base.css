@@ -142,6 +142,10 @@ hr {
     overflow-y: auto;
 }
 
+.float-right {
+    float: right !important;
+}
+
 .nav-link,
 .nav-link>a,
 footer h6,
