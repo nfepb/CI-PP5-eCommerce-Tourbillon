@@ -204,6 +204,7 @@ def add_category(request):
     template = 'products/add_category.html'
     context = {
         'form': form,
+        'categories': Category.objects.all(),
         'on_page': True,
     }
     return render(request, template, context)
