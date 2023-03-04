@@ -5,8 +5,11 @@ from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
 
-from .models import Product, Category, GenderCategory, ProductStatus, Brand
-from .forms import ProductForm
+from .models import (
+    Product, Category, GenderCategory, 
+    ProductStatus, Brand, Category
+    )
+from .forms import ProductForm, CategoryForm
 
 
 def all_products(request):
@@ -176,3 +179,77 @@ def delete_product(request, product_id):
     product.delete()
     messages.success(request, "Product deleted!")
     return redirect(reverse("products"))
+
+
+@login_required
+def add_category(request):
+    """ Add a category to the store """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry only store admins can do that.')
+        return redirect(reverse('home'))
+
+    if request.method == 'POST':
+        form = CategoryForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully added category!')
+            return redirect(reverse('add_category'))
+        else:
+            messages.error(
+                request, 'Failed to add the category.\
+                     Please ensure the form is valid.')
+    else:
+        form = CategoryForm()
+    template = 'products/add_category.html'
+    context = {
+        'form': form,
+        'on_page': True,
+    }
+    return render(request, template, context)
+
+
+@login_required
+def edit_category(request, category_id):
+    """ Edit a category on add category page """
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry only store owners can do that.')
+        return redirect(reverse('home'))
+
+    category = get_object_or_404(Category, pk=category_id)
+    if request.method == 'POST':
+        form = CategoryForm(request.POST, instance=category)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Successfully updated category!')
+            return redirect(reverse('add_category'))
+        else:
+            messages.error(
+                request,
+                'Failed to update category. Please ensure the form is valid.')
+    else:
+        form = CategoryForm(instance=category)
+        messages.info(request, f'You are editing {category.friendly_name}')
+
+    template = 'products/edit_category.html'
+    context = {
+        'form': form,
+        'category': category,
+        'on_page': True,
+    }
+
+    return render(request, template, context)
+
+
+@login_required
+def delete_category(request, category_id):
+    """ Delete a category"""
+    if not request.user.is_superuser:
+        messages.error(request, 'Sorry only store admins can do that.')
+        return redirect(reverse('home'))
+
+    category = get_object_or_404(Category, pk=category_id)
+    category.delete()
+    messages.success(request, 'Category deleted')
+
+    return redirect(reverse('add_category'))

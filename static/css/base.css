@@ -294,6 +294,11 @@ footer h6,
     width: auto;
 }
 
+.category-table {
+    max-height: 450px;
+    overflow: auto;
+}
+
 
 /***********/
 /* PRODUCT FORM */

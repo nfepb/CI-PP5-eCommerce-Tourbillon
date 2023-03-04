@@ -1,6 +1,6 @@
 """ models for Brand,Category,GenderCategory, ProductStatus, Product """
 from django.db import models
-# from profiles.models import UserProfile
+from profiles.models import UserProfile
 
 
 class Brand(models.Model):
