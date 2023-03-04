@@ -499,6 +499,20 @@ input[name='q']::placeholder {
     .img-magnifier-container {
         text-align: center;
     }
+
+    .btn.btn-outline-secondary.rounded-1,
+    .btn.btn-style.rounded-0,
+    .btn.btn-outline-secondary.rounded-1.btn-lg,
+    .btn.btn-style.rounded-1.btn-lg {
+        padding: .6rem 1rem;
+    }
+
+    .btn.btn-outline-secondary.rounded-1.btn-lg,
+    .btn.btn-style.rounded-1.btn-lg {
+        font-size: .75rem;
+        margin-bottom: 20px;
+        width: 190px;
+    }
 }
 
 @media only screen and (max-width: 900px) {

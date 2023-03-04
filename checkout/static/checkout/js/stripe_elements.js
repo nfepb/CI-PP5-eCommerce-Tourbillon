@@ -3,12 +3,12 @@ const clientSecret = $("#id_client_secret").text().slice(1, -1);
 const stripe = Stripe(stripePublicKey);
 const elements = stripe.elements();
 // Style from https://stripe.com/docs/js/appendix/style
-const appearance = {
+const style = {
   base: {
     color: "#000",
     fontFamily: '"Roboto", sans-serif',
     fontSmoothing: "antialiased",
-    fontSize: "1.2rem",
+    fontSize: "16px",
     "::placeholder": {
       color: "#aab7c4",
     },
@@ -19,7 +19,7 @@ const appearance = {
   },
 };
 // Pass the appearance object to the Elements instance
-let card = elements.create("card", { appearance: appearance });
+let card = elements.create("card", { style: style });
 // Mount card on the div in checkout page
 card.mount("#card-element");
 
