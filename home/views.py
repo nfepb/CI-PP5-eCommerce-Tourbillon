@@ -1,12 +1,17 @@
 """views for home app"""
-from django.shortcuts import render
+from django.shortcuts import render, redirect, reverse
+from django.template.loader import render_to_string
+from django.conf import settings
 
 
 def home(request):
     """
     view to return the home page
     """
-    return render(request, "home/home.html")
+    context = {
+        'on_page': True,
+    }
+    return render(request, "home/home.html", context)
 
 
 def index(request):

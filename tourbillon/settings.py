@@ -100,6 +100,8 @@ TEMPLATES = [
                 "django.template.context_processors.media",
                 # Makes the bag contents available through all the site
                 'bag.contexts.bag_contents',
+                # 'home.contexts.product_categories',
+                'wishlist.contexts.wishlist_list_items',
             ],
             # List of built ins that we want available in all our templates by default.
             "builtins": [
