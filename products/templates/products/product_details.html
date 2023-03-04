@@ -76,6 +76,35 @@
           {% if product.review_count > 0 %}
           <p class="me-3 small d-inline">({{ product.review_count}})</p>
           {% endif %}
+          <!-- Wishlist  -->
+          <div>
+            {% if request.user.is_authenticated %}
+
+            <a href="{% url 'add_to_wishlist' product.id %}">
+              {% if product in wishlist_items %}
+              <div
+                class="btn text-uppercase mt-5 rounded-1"
+                style="background-color: goldenrod"
+              >
+                remove from wishlist
+              </div>
+              {% else %}
+
+              <div class="btn text-uppercase mt-5 rounded-1">
+                <i class="fas fa-heart text-danger me-2"></i>
+              </div>
+              {% endif %}
+            </a>
+            {% else %}
+            <button
+              class="btn text-uppercase mt-5 border-secondary btn-style"
+              data-bs-toggle="modal"
+              data-bs-target="#wishlist"
+            >
+              Add to wishlist
+            </button>
+            {% endif %}
+          </div>
         </div>
         {% if request.user.is_superuser %}
         <small class="ml-3">
@@ -191,7 +220,6 @@
     <div></div>
   </div>
 </div>
-<!-- WISHLIST IF RULES  -->
 <div class="container">
   <div class="row">
     <div class="col">
