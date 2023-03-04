@@ -149,8 +149,8 @@
       <h5 class="my-2 text-uppercase">
         <i class="fad fa-box-full"></i>
         <!-- prettier-ignore -->
-        <span class="text-success">Free</span> delivery on orders over € {{
-        free_delivery_threshold }}!
+        <span class="text-success">Free</span> delivery on orders over € 
+        {{ free_delivery_threshold }}!
       </h5>
     </div>
   </header>
@@ -310,9 +310,9 @@
             <!--End mc_embed_signup-->
           </div>
           <div class="col-sm-12 col-md-4">
-            <h3 class="sub-title">Contact Us</h3>
+            <h3 class="sub-title">Support</h3>
             <ul class="fw-lighter fs-6">
-              <li><i class="fas fa-phone pacific-blue"></i> +12 345678987</li>
+              <li><a href="{% url 'faq_page' %}"><i class="fas fa-phone pacific-blue"></i>FAQ</a></li>
               <li>
                 <i class="far fa-envelope interactive-color"></i>
                 info@tourbillon.com
