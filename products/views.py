@@ -236,6 +236,7 @@ def edit_category(request, category_id):
     context = {
         'form': form,
         'category': category,
+        'categories': Category.objects.all(),
         'on_page': True,
     }
 

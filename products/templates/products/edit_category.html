@@ -41,6 +41,49 @@
         </div>
       </form>
     </div>
+    <!-- List of categories, edit and delete btns -->
+    <div class="col-12 col-lg-6">
+      <div class="category-table table-responsive mb-5">
+        <table class="table table-sm table-borderless">
+          <thead>
+            <tr class="border-bottom">
+              <th>Name</th>
+              <th>Friendly Name</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for category in categories %}
+            <tr>
+              <td>
+                <p>{{ category.name }}</p>
+              </td>
+              <td>{{ category.friendly_name }}</td>
+              <td>
+                <div class="btn d-inline">
+                  <a
+                    href="{% url 'edit_category' category.id %}"
+                    class="btn text-success"
+                    >Edit</a
+                  >
+
+                  <button
+                    class="btn text-danger"
+                    data-toggle="modal"
+                    data-target="#deleteModal{{category.id}}"
+                  >
+                    Delete
+                  </button>
+                  <!-- Modal -->
+                  {% include 'products/includes/delete_category_modal.html' %}
+                </div>
+              </td>
+            </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
   </div>
 </div>
 
