@@ -444,7 +444,7 @@ input[name='q']::placeholder {
 
 @media (min-width: 992px) {
     .header-container {
-        padding-top: 102px;
+        padding-top: 164px;
     }
 
     .topnav {
