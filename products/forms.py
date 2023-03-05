@@ -1,7 +1,7 @@
 from django import forms
 from django_summernote.widgets import SummernoteWidget, SummernoteInplaceWidget
 from .widgets import CustomClearableFileInput
-from .models import Product, Category
+from .models import Product, Category, Review
 
 
 class ProductForm(forms.ModelForm):
@@ -11,7 +11,7 @@ class ProductForm(forms.ModelForm):
     class Meta:
         model = Product
         # Include all the fields
-        fields = "__all__"
+        exclude = ('review_count', 'rating')
         widgets = {
             "description": SummernoteWidget(),
             "watch_details": SummernoteWidget(),
@@ -40,3 +40,13 @@ class CategoryForm(forms.ModelForm):
         """category model fields"""
         model = Category
         fields = '__all__'
+
+
+class ReviewForm(forms.ModelForm):
+    """ Form for leaving rating and review """
+
+    class Meta:
+        """review model fields"""
+        model = Review
+        fields = ['rating', 'body']
+        labels = {'body': 'Please Write Your Review'}

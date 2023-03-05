@@ -117,6 +117,30 @@ class Product(models.Model):
     )
     featured = models.BooleanField(default=False)
     in_stock = models.BooleanField(default=False)
+    review_count = models.DecimalField(
+        max_digits=6, decimal_places=0, null=True, blank=True, default=0
+    )
 
     def __str__(self):
         return str(self.name)
+
+
+class Review(models.Model):
+    """ A review model for users to review products """
+
+    RATING = [
+        (5, '5'),
+        (4, '4'),
+        (3, '3'),
+        (2, '2'),
+        (1, '1'),
+    ]
+
+    user = models.ForeignKey(UserProfile, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.CASCADE)
+    rating = models.IntegerField(choices=RATING, default=3)
+    body = models.TextField(max_length=1024)
+    created_on = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f'User: {self.user} rated {self.product}, {self.product} stars.'

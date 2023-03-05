@@ -70,3 +70,18 @@ class ProductStatusAdmin(SummernoteModelAdmin):
         "friendly_name",
         "name",
     )
+
+
+@admin.register(Review)
+class ReviewAdmin(admin.ModelAdmin):
+    """review model display"""
+    list_display = (
+        'user',
+        'rating',
+        'product',
+        'created_on'
+
+    )
+
+    search_fields = ('user', 'product',)
+    ordering = ('-created_on',)
