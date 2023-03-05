@@ -409,6 +409,14 @@ a.category-badge>span.badge:hover {
     width: auto;
 }
 
+
+/***********/
+/* NEWSLETTER */
+.newsletter-table {
+    max-height: 450px;
+    overflow: auto;
+}
+
 /***********/
 /* ALLAUTH FORMS */
 .form-group {
