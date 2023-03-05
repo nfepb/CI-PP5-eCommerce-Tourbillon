@@ -9,6 +9,8 @@ That this website is for educational purposes only and the credit card payment f
 
 # Strategy Plane
 
+The world of acquiring watches is growing and people are seeking for their wholy grail for different reasons (eg: fashion, passion, or investment). Watch seekers are looking for specific watches on different channels in order to be the first ones to acquire their next piece. 
+
 ## App's Goals
 
 * To provide the users with a pleasant experience on the website where they read more about the offered watches.
@@ -16,6 +18,12 @@ That this website is for educational purposes only and the credit card payment f
 * To allow users to share their thoughts on their favorite items.
 * To allow the store admin users to approve, update and delete reviews from the frontend.
 * To provide users with clear and adequate responses based on their input or actions.
+
+## Site User / Target Audience / Demographic
+
+* Target market is aimed at anyone interested in luxury watches.
+* People who may have acquired or are looking to acquire their next timepiece.
+* People who are interested in horology.
 
 # Scope Plane
 
@@ -102,6 +110,7 @@ The websites of several watch houses helped me define what were some of the crit
 ## Typography
 
 * <i>Monsieur La Doulaise</i> is used for the site logo.
+* <i>Homemade Apple<i> us used for site titles.
 * <i>Montserrat</i> is used for the rest of the content of the site, including headers.
 
 ## Colours
@@ -111,6 +120,8 @@ The websites of several watch houses helped me define what were some of the crit
 The name of the app, "Tourbillon" has two definitions. In watchmaking (or horology), it defines a type of watch escapement to increase the accuracy. In French, a tourbillon is used to define a whirlwind. The main colour chosen, Prussian Blue, Pacific Blue, and White are used to reference colour of the sea in turmoil. The Columbia Blue and Cafe Noir are there to reference respectively the casing foa watch, along with its brown leather strap.
 
 ## Images
+
+All images from from the Unsplash website and the Watchbase database.
 
 ## Wireframes
 
@@ -225,6 +236,8 @@ We do not use cookies on the website and do not display Google AdSense to our us
 | [Django Bootstrap DatePicker Plus](https://pypi.org/project/django-bootstrap-datepicker-plus/) | Used for date input in the forms. |
 | [Font-Aweome](https://fontawesome.com/) | Used for the icons. |
 | [Stripe](https://stripe.com/) | This solution is used to process all payments in the checkout process and to send webhooks on the status of those. |
+| [Unsplash](https://unsplash.com/) | For the main background image. |
+| [Watchbase](https://watchbase.com/) | For the watch details and images. |
 
 ## Github deployment
 
@@ -254,10 +267,168 @@ Inside this file add these 3 lines:
 1. Install the Python package with `pip3 install django-allauth`
 2. Verify that ‘django.contrib.sites’ is in the INSTALLED_APPS of the settings.py file
 
+## Stripe
+1. Register for an account at stripe.com
+2. Go to Developers section once logged in
+3. Go to API keys section
+1. Note both the publishable and secret keys
+1. In your local environment(env.py) and Heroku, create environment variables `STRIPE_PUBLIC_KEY` and `STRIPE_SECRET_KEY` with the publishable and secret key values `os.environ.setdefault('STRIPE_PUBLIC_KEY', 'YOUR_VALUE_GOES_HERE')` `os.environ.setdefault('STRIPE_SECRET_KEY', 'YOUR_VALUE_GOES_HERE')`
+1. Back in the Developers section of your stripe account click on Webhooks
+1. Create a webhook with the url of your website `/checkout/wh/`, for example:
+    1. Select the payment_intent.payment_failed and payment_intent.succeeded as events to send
+    1. Note the key created for this webhook
+1. In your local environment(env.py) and Heroku, create environment variable `STRIPE_WH_SECRET` with the secret values os.`environ.setdefault('STRIPE_WH_SECRET', 'YOUR_VALUE_GOES_HERE')`
+1. Test the webhook and note the success/fail attempts for troubleshooting, see events and logs for further testing.
+
+## Amazon WebServices
+1. Create an account at aws.amazon.com
+1. Open the S3 application and create an S3 bucket
+1. Select AWS Region.
+1. Uncheck the "Block All Public access setting" & acknowledge that the bucket will be public, it will need to be public in order to allow public access to static files.
+1. In the Properties section, navigate to the "Static Website Hosting" section and click edit
+1. Under the Properties section, turn on "Static Website Hosting", and set the index.html and the error.html values.
+1. In the Permissions section, click edit on the CORS configuration and set the below configuration
+1. Click to edit the bucket policy and generate and set the below configuration:
+Bucket policy
+1. Go to the Access Control List and set the List objects permission for everyone under the Public Access section.
+1. Open the IAM application to control access to the bucket and set up a user group called
+1. Click on Policies, and Create Policy.
+1. Click on the JSON tab and import a pre-built Amazon policy called AmazonS3FullAccess:
+1. Set the following settings in the JSON tab:
+1. Click Review Policy, give it a name and description and click Create Policy.
+1. To attach the policy to the group, navigate to Groups, then Permissions, and under Add Permissions, select Attach Policy.
+1. To create a user for the group, click Add User, and create one
+1. Add the user to the group created, making sure to download the CSV file which contains the user's access credentials.
+1. Note the following AWS code in Settings.py. An environment variable called USE_AWS must be set to use these settings, otherwise it will use local storage:
+
+## Google Email
+1. Create an email account at google.com, login, go to accounts settings in your gmail account and then click on Other Google Account Settings
+1. Go to accounts and import then click on other account settings
+1. Under signing into Google, turn on 2-step verification and follow the steps to enable
+1. Once verified click on app passwords, select Other as the app and give the password a name, for example Django
+1. Click create and a 16 digit password will be generated, copy this 16 digit password
+1. In the env.py file, create an environment variable called `EMAIL_HOST_PASS` with the 16 digit password
+1. In the env.py file, create an environment variable called `EMAIL_HOST_USER` with the email address of the gmail account
+1. Set and confirm the following values in the settings.py file to successfully send emails
+You will also need to set the variables `EMAIL_HOST_PASS` and `EMAIL_HOST_USER` in your production instance, for example Heroku
+
+## Deployment
+1. This project was developed using a GitPod workspace. The code was committed to Git and pushed to GitHub using the terminal.
+1. Log in to Heroku or create an account
+1. On the main page click New and Create New App
+1. Note: new app name must be unique
+1. Next select your region, I chose Europe.
+1. Click Create App button
+1. Click in resources and select Heroku Postgres database
+1. Click Reveal Config Vars and add new config `SECRET_KEY`
+1. Click Reveal Config Vars and add new config `DISABLE_COLLECTSTATIC = 1`
+1. The next page is the project’s Deploy Tab. Click on the Settings Tab and scroll down to Config Vars
+1. Next, go to Buildpack section click Add Buildpack select python and Save Changes
+1. Scroll to the top of the page and choose the Deploy tab
+1. Select Github as the deployment method
+1. Confirm you want to connect to GitHub
+1. Search for the repository name and click the connect button
+1. Scroll to the bottom of the deploy page and select the preferred deployment type
+1. Click either Enable Automatic Deploys for automatic deployment when you push updates to Github
+1. As Heroku Student Pack no longer includes free access to the Postgres add-on I had to migrate Postgres databases from Heroku to keep ElephantSQL.
+1. Navigate to ElephantSQL.com and click “Get a managed database today”
+Select “Try now for FREE” in the TINY TURTLE database plan
+1. Select “Log in with GitHub” and authorize ElephantSQL with your selected GitHub account
+1. In the Create new team form
+
+## Migrating databases
+1. Create a database
+1. Log in to ElephantSQL.com to access your dashboard
+1. Click “Create New Instance”
+1. Set up your plan
+1. Select “Select Region” EXAMPLE "EU-West-1 (Ireland)"
+1. Then click “Review”
+1. Check your details are correct and then click “Create instance”
+1. Return to the ElephantSQL dashboard and click on the database instance name for this project
+1. Migrating your data
+1. Navigate to the Postgres Migration Tool repo on github in a new browser tab
+1. Click the Gitpod button to open a new workspace
+1. In a different browser tab, go to your app in Heroku and select the Settings tab
+1. Click the “Reveal Config Vars” button
+1. Copy the value in the `DATABASE_URL` Config Var. It will start with postgres://
+1. Return to Gitpod and paste in the URL you just copied into the terminal where prompted to provide your `DATABASE_URL` and click enter
+1. In your original browser tab, get your ElephantSQL database URL. Again, it will start with postgres://
+1. Return to Gitpod and paste in the URL where prompted
+1. The data will now be downloaded from Heroku and uploaded to your ElephantSQL database
+1. To test that your database has been moved successfully, return to ElephantSQL and select BROWSER
+1. Click the “Table queries” button. If you see any options in the dropdown, your tables have been created
+1. Select a table name you recognise, and then click “Execute”
+1. You should see your data displayed relating to the table you selected
+1. Connecting ElephantSQL database to Heroku
+1. In the Heroku Dashboard for your project, open the Resources tab
+1. In the Resources tab, remove the existing Postgres add-on:
+1. Confirm by typing in the name of your Heroku app when prompted.
+1. Navigate to the Settings tab
+1. Reveal your existing Config Vars. The original `DATABASE_URL` should have been deleted when the add-on was removed.
+1. Add a new config var called `DATABASE_URL` and paste in the value for your ElephantSQL database, and click Add to save it.
+1. Check the Activity tab to confirm
+
+## Final Deployment
+1. Create a runtime.txt python-3.11
+1. Create a Procfile
+1. When development is complete change the debug setting to: `DEBUG = False` in settings.py
+1. In Heroku settings, delete the config vars for `DISABLE_COLLECTSTATIC = 1`
+1. Forking This Project
+1. Open GitHub
+1. Find the 'Fork' button at the top right of the page
+1. Once you click the button the fork will be in your repository
+
+
+## Cloning This Project / Local Deployment
+1. Clone this project by following the steps:
+1. Open GitHub
+1. You will be provided with three options to choose from, HTTPS, SSH or GitHub CLI, click the clipboard icon in order to copy the URL
+1. Once you click the button the fork will be in your repository
+1. Open a new terminal
+1. Change the current working directory to the location that you want the cloned directory
+1. Type 'git clone' and paste the URL copied in step 3
+```git clone https://github.com/nfepb/CI-PP5-eCommerce-Tourbillon```
+1. Press 'Enter' and the project is cloned to your workspace
+1. Create an env.py file(do not commit this file to source control) in the root folder in your project, and add in the following code with the relevant key, value pairs, and ensure you enter the correct key values<br>
+
+<br><code>import os</code>
+<br><code>os.environ["SECRET_KEY"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["STRIPE_PUBLIC_KEY"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["STRIPE_SECRET_KEY"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["STRIPE_WH_SECRET"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["AWS_ACCESS_KEY_ID"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["AWS_SECRET_ACCESS_KEY"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["EMAIL_HOST_USER"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["EMAIL_HOST_PASS"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["USE_AWS"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["DATABASE_URL"]= 'TO BE ADDED BY USER'</code>
+<br><code>os.environ["DEVELOPMENT"] ='True'</code>
+
+1. Some values for the environment variables above are described in different sections of this readme
+1. Install the relevant packages as per the requirements.txt file
+1. In the settings.py ensure the connection is set to either the Heroku postgres database or the local sqlite database
+1. Ensure debug is set to true in the settings.py file for local development
+1. Add localhost to the `ALLOWED_HOSTS` variable in settings.py
+1. Run `python3 manage.py showmigrations` to check the status of the migrations
+1. Run `python3 manage.py migrate` to migrate the database
+1. Run `python3 manage.py createsuperuser` to create a super/admin user
+1. Start the application by running `python3 manage.py runserver`
+1. Open the application in a web browser, 
+
 # Credits
+* Code Institute - [Boutique Ado](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+EA101+2021_T1/courseware/eb05f06e62c64ac89823cc956fcd8191/3adff2bf4a78469db72c5330b1afa836/) -  Walkthrough
+* Code Institute - [Hello Django](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/dc049b343a9b474f8d75822c5fda1582/121ef050096f4546a1c74327a9113ea6/) -  Walkthrough
+* Code Institute - [I think therefore I blog](https://learn.codeinstitute.net/courses/course-v1:CodeInstitute+FST101+2021_T1/courseware/b31493372e764469823578613d11036b/fe4299adcd6743328183aab4e7ec5d13/
+) - Django blog project Walkthrough
 
 ## Content
 
 ## Media
 
 ## Acknowledgements
+* To create this website, I relied on material covered in the Full Stack Development course by Code Institute.
+* I also sourced information and help from a variety of sources such as Slack Community Channels, Udemy, W3Schools, MDN and YouTube for Online Web Tutorials and resources.
+* Ronan for being a great mentor and helping me to undertstand how to build a more robust application.
+* Amelle for feeding me and supporting me during my long days and nights stuck at the keyboard.
+
+This project is for educational use only and was created for the Code Institute e-commerce course.
