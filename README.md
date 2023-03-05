@@ -136,6 +136,7 @@ The mobile and desktop for this project can be found [here]()
 
 * The navigation bar appears on every page so users can easily navigate through the site
 * Navigation bar has links for 'Home', 'All Products', 'Categories', 'Gender', 'More' and icons for account and bag, along with a search bar.
+* The navbar is fully responsive, collapsing into a hamburger menu for medium and small screen size
 ![Navbar](docs/features/navbar.png)
 
 ### Footer
@@ -181,22 +182,39 @@ The mobile and desktop for this project can be found [here]()
 ![Product details summary](docs/features/product-details-summary.png)
 * Users can find general information from the page they land on about the product such as the price, the categories, the Brand, and how it is rate by other users.
 * Users can add the item to their bag or go back to the previous page and find other products. 
+* Logged in users can add or remove individual products from this page.
 ![Product details addtional information](docs/features/product-details-additional-info.png)
 * By scrolling down, users can find additional information about the watch and characteristics of this specific model. 
 ![Product Review](docs/features/product-details-reviews.png)
 * At the bottom of the page, users can read the detail of the reviews posted about this specific product. If a user is not logged in, a message is asking to log in or sign up in order to post a review. If the user has already posted about this specific product, they cannot post a new message. Nonetheless, they <i>should</i> be able to amend their message. This functionality stopped working post deployment. However, deleting the review is possible.
 
-
 ### Shopping Bag
-
-* The shopping bag is situated on the top right corner of the site and it is always visible for the user throughout all the pages. With one click they can access their shopping bag to see what is in there, update the quantities of products they wish to purchase or to delete them from the shopping bag
-* The navbar is fully responsive, collapsing into a hamburger menu for medium and small screen size
+![Shopping bag summary](docs/features/shopping-bag.png)
+* The shopping bag is situated on the top right corner of the site and it is always visible for the user throughout all the pages. With one click they can access their shopping bag to see what is in there, update the quantities of products they wish to purchase or to delete them from the shopping bag.
 
 ### Checkout
+![Checkout page](docs/features/checkout-page.png)
+* Users have to fill out their information in order to buy the products in the bag. Please use the test values to make a payment.
 
 ### Checkout - Success
+![Checkout success page](docs/features/checkout-success.png)
+* An order was successfully placed. A confirmation email is sent. This logic is triggered by Stripe webhooks ensuring that the order is created should the user close the page during payment processing.
+
+### My Account
+![My Account Page](docs/features/my-account-page.png)
+* From there, users can choose to access one of the options: access their profile page to manage their details, view their previous orders, access their wishlist.
 
 ### Profile Page
+![Profile Page](docs/features/profile-page.png)
+* On this page a logged in user (with a valid registration account) can add or edit their own personal details.
+
+### Previous Orders
+![Order history page](docs/features/order-history.png)
+* The previous order displays a list of all the orders previously made by the user
+
+### Wishlist
+![Wishlist Page](docs/features/wishlist.png)
+* Users can review the products they have added to their wishlist and manage them. The image is a link that will take them to the product details page.
 
 ### 404 Page
 
@@ -212,6 +230,7 @@ The mobile and desktop for this project can be found [here]()
 ## Future Features
 - Add stock on product to know if there are still products in store for sale. Otherwise, this product would uncheck the checkbox on product `available`. Extra logic would provide this information to website users.
 - Back to top button
+- Product carousel to display specific items and drive click-through rate.
 
 ## Issues remaining
 - When a user tries to modify a pubished review: `TemplateDoesNotExist` error message.

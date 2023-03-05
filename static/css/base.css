@@ -413,6 +413,12 @@ a.category-badge>span.badge:hover {
     width: auto;
 }
 
+/***********/
+/* ORDER HISTORY PAGE */
+.order-history-img>img {
+    height: 90px;
+    width: 80px;
+}
 
 /***********/
 /* NEWSLETTER */
@@ -595,6 +601,13 @@ input[name='q']::placeholder {
 
     #footer .copyright p {
         width: initial;
+    }
+}
+
+@media only screen and (max-width: 668px) {
+    .accounts-btns {
+        width: 100%;
+        font-size: 1rem;
     }
 }
 
