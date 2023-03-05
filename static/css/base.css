@@ -7,6 +7,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@100;400;900&display=swap');
 /* Roboto */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+/* Homemade Apple */
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&display=swap');
 
 /***********/
 /* GENERAL STYLES */
@@ -287,6 +289,38 @@ footer h6,
     opacity: 0.9 !important;
 }
 
+
+/***********/
+/* FOOTER */
+footer {
+    background-color: var(--prussian-blue);
+    border-top: 2px solid var(--silver-grey);
+    color: whitesmoke;
+}
+
+footer h6,
+footer h3 {
+    font-family: 'Homemade Apple', cursive;
+    color: whitesmoke;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+}
+
+.footer-link {
+    color: var(--main-nav-color);
+}
+
+.footer-link:hover {
+    color: var(--pacific-blue);
+}
+
+.btn-info:hover {
+    color: var(--pacific-blue);
+    background-color: whitesmoke;
+    border-color: var(--pacific-blue);
+}
+
 /***********/
 /* PRODUCTS PAGE */
 .product-img {
@@ -342,7 +376,6 @@ footer h6,
 
 .sub-title {
     font-size: 2rem;
-    color: var(--text-black);
     font-weight: 500;
     padding: 15px 0;
 }
@@ -375,7 +408,6 @@ a.category-badge>span.badge:hover {
     max-height: 80px;
     width: auto;
 }
-
 
 /***********/
 /* ALLAUTH FORMS */
@@ -452,6 +484,14 @@ input[name='q']::placeholder {
 @media only screen and (min-width: 1200px) {
     .container {
         max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 1030px) {
+
+    .navbar-nav .nav-link,
+    .footer-link {
+        width: 25%;
     }
 }
 

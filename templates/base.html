@@ -186,8 +186,6 @@
   <footer id="footer" class="w-100 mt-auto text-center pb-4">
     <div class="container-fluid">
       <div class="row">
-        <span class="logo prussian-blue">Tourbillon</span>
-        <hr />
         <div class="row row-reverse">
           <div class="col-sm-12 col-md-4">
             <h3 class="sub-title">Follow Us</h3>
@@ -198,7 +196,7 @@
                   rel="noopener"
                   target="_blank"
                   aria-label="Go to the facebook company page"
-                  class="fw-lighter fs-6"
+                  class="fw-lighter fs-6 footer-link"
                   ><i class="fab fa-facebook-f pacific-blue"></i> Facebook</a
                 >
               </li>
@@ -208,7 +206,7 @@
                   rel="noopener"
                   target="_blank"
                   aria-label="Go to the Instagram company page"
-                  class="fw-lighter fs-6"
+                  class="fw-lighter fs-6 footer-link"
                   ><i class="fab fa-instagram pacific-blue"></i> Instagram</a
                 >
               </li>
@@ -232,17 +230,14 @@
                 novalidate
               >
                 <div id="mc_embed_signup_scroll">
-                  <h4 class="interactive-color">Subscribe</h4>
-                  <div class="mc-field-group">
-                    <label for="mce-EMAIL"
-                      >Email Address <span class="asterisk">*</span>
-                    </label>
+                  <div class="mc-field-group pb-3">
                     <input
                       type="email"
                       value=""
                       name="EMAIL"
                       class="required email"
                       id="mce-EMAIL"
+                      placeholder="Subscriber email*"
                       required
                     />
                   </div>
@@ -277,11 +272,8 @@
                         value="Subscribe"
                         name="subscribe"
                         id="mc-embedded-subscribe"
-                        class="button"
+                        class="button btn btn-info rounded-1"
                       />
-                    </div>
-                    <div class="indicates-required">
-                      <span class="asterisk">*</span> Required
                     </div>
                   </div>
                 </div>
@@ -312,9 +304,9 @@
           <div class="col-sm-12 col-md-4">
             <h3 class="sub-title">Support</h3>
             <ul class="fw-lighter fs-6">
-              <li><a href="{% url 'faq_page' %}"><i class="fas fa-phone pacific-blue"></i>FAQ</a></li>
+              <li><a href="{% url 'faq_page' %}" class="footer-link"><i class="fas fa-phone pacific-blue"></i>FAQ</a></li>
               <li>
-                <i class="far fa-envelope interactive-color"></i>
+                <i class="far fa-envelope pacific-blue"></i>
                 info@tourbillon.com
               </li>
               <li>
@@ -327,7 +319,7 @@
       </div>
       <hr />
       <div class="copyright">
-        <p>
+        <p class="fs-6 fw-lighter">
           <i class="far fa-copyright pacific-blue"></i> All Rights Reserved |
           Tourbillon | <span id="year"></span>
         </p>
