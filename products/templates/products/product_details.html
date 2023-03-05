@@ -243,6 +243,13 @@
 </div>
 <!-- END PRODUCT DETAILS SECTION -->
 <!-- REVIEW SECTION -->
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <hr class="w-100" />
+    </div>
+  </div>
+</div>
 <section id="reviews-section">
   <div class="container">
     <div class="row">
@@ -263,35 +270,35 @@
         <div class="row mt-3">
           <div class="col review-stars">
             {% if review.rating == 5 %}
-            <i class="fa fa-solid fa-star"></i
-            ><i class="fa fa-solid fa-star"></i
-            ><i class="fa fa-solid fa-star"></i
-            ><i class="fa fa-solid fa-star"></i
-            ><i class="fa fa-solid fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
             {% elif review.rating == 4 %}
-            <i class="fa fa-solid fa-star"></i
-            ><i class="fa fa-solid fa-star"></i>
-            <i class="fa fa-solid fa-star"></i
-            ><i class="fa fa-solid fa-star"></i>
-            <i class="fa fa-regular fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
             {% elif review.rating == 3 %}
-            <i class="fa fa-solid fa-star"></i
-            ><i class="fa fa-solid fa-star"></i
-            ><i class="fa fa-solid fa-star"></i
-            ><i class="fa fa-regular fa-star"></i
-            ><i class="fa fa-regular fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
             {% elif review.rating == 2 %}
-            <i class="fa fa-solid fa-star"></i
-            ><i class="fa fa-solid fa-star"></i
-            ><i class="fa fa-regular fa-star"></i
-            ><i class="fa fa-regular fa-star"></i
-            ><i class="fa fa-regular fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
             {% elif review.rating == 1 %}
-            <i class="fa fa-solid fa-star"></i
-            ><i class="fa fa-regular fa-star"></i
-            ><i class="fa fa-regular fa-star"></i
-            ><i class="fa fa-regular fa-star"></i
-            ><i class="fa fa-regular fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
+            <i class="far fa-star"></i>
             {% endif %}
           </div>
           <div>
@@ -302,22 +309,24 @@
               aria-label="Edit review from {{ review.user }}"
               class="text-secondary text-decoration-none"
             >
-              <span class="icon mr-2">
-                <i class="fa-regular fa-pen-to-square"></i>
+              <span class="icon me-2">
+                <i class="fas fa-edit"></i>
               </span>
             </a>
             <a
               class="text-danger text-decoration-none btn"
-              data-toggle="modal"
-              data-target="#reviewDeleteModal"
+              data-bs-toggle="modal"
+              data-bs-target="#reviewDeleteModal"
               aria-label="Delete review from {{ review.user }}"
             >
               <span class="icon">
-                <i class="fa-regular fa-trash-can"></i>
+                <i class="fas fa-trash"></i>
               </span>
             </a>
 
-            {% include 'books/includes/delete_review_modal.html' %} {% endif %}
+            {% include 'products/includes/delete_review_modal.html' %}
+            <!-- prettier-ignore -->
+            {% endif %}
           </div>
         </div>
         <div class="row">
@@ -330,7 +339,7 @@
         </div>
         {% endfor %} {% else %} {% if not edit %}
         <div class="col-12 col-md-8 mx-auto">
-          <h5>This Watch has no reviews</h5>
+          <h5>This watch has no reviews</h5>
         </div>
         {% endif %} {% endif %}
       </div>

@@ -399,6 +399,13 @@ a.category-badge>span.badge:hover {
     color: whitesmoke !important;
 }
 
+.fa-star,
+.fa-star-half,
+.fa-star-half-o {
+    color: #d7b500;
+    text-shadow: 0 0.5rem 1rem rgba(0, 0, 0, .15) !important;
+}
+
 /***********/
 /* BAG PAGE */
 .bag-item-img {

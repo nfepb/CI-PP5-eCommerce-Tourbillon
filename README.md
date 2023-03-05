@@ -152,6 +152,9 @@ The mobile and desktop for this project can be found [here]()
 
 ## Future Features
 
+## Issues remaining
+- When a user tries to modify a pubished review: `TemplateDoesNotExist` error message.
+
 
 # Marketing Strategy (Optional)
 

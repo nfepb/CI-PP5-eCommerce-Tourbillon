@@ -1,15 +1,19 @@
 """Views for Product app"""
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import (
+    render, redirect, reverse, get_object_or_404
+)
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from django.db.models import Q
 from django.db.models.functions import Lower
+from django.db.models import Avg
 
 from .models import (
     Product, Category, GenderCategory, 
     ProductStatus, Brand, Category, Review
     )
-from .forms import ProductForm, CategoryForm
+from profiles.models import UserProfile
+from .forms import ProductForm, CategoryForm, ReviewForm
 
 
 def all_products(request):
@@ -136,6 +140,7 @@ def product_details(request, product_id):
 
     context = {
         'product': product,
+        'form': form,
         'reviews': reviews,
         'review_count': review_count,
         'reviewed': reviewed,
