@@ -1,0 +1,8 @@
+{% autoescape off %}
+{{ message }}
+{% endautoescape %}
+
+
+Please visit our page for more information! https://pp5-ecommerce-tourbillon.herokuapp.com/
+
+If you want to unsuscribe follow the link https://pp5-ecommerce-tourbillon.herokuapp.com//newsletter/unsubscribe

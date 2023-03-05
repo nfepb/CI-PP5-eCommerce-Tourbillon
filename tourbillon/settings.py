@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     'profiles',
     'wishlist',
     'questions',
+    'newsletter',
 
     # Packages
     'crispy_forms',
@@ -103,6 +104,7 @@ TEMPLATES = [
                 'bag.contexts.bag_contents',
                 # 'home.contexts.product_categories',
                 'wishlist.contexts.wishlist_list_items',
+                'newsletter.contexts.subscribe_form_global',
             ],
             # List of built ins that we want available in all our templates by default.
             "builtins": [

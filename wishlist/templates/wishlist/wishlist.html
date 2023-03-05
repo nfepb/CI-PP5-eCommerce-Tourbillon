@@ -52,12 +52,12 @@
                   {% endif %}
                 </div>
               </td>
-              <td>€{{ product.sort_price }}</td>
+              <td>€{{ product.price|floatformat }}</td>
               <td>
                 <div class="btn rounded-1 p-0">
                   <a
                     href="{% url 'remove_from_wishlist' product.id %}"
-                    class="btn bg-danger text-light"
+                    class="btn bg-danger text-light rounded-1"
                     >Remove</a
                   >
                 </div>
