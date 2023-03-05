@@ -149,6 +149,10 @@ The mobile and desktop for this project can be found [here]()
 
 ### Login Page
 
+* The Login/Register feature is located in the upper right corner and offers the user to log in or register for an account as well as log out of the site
+* When the user is logged in links for 'Login' and 'Register' will change to 'My Profile', 'Logout'
+* The admin user has extra access that allow them to add, update and remove products & categories from the store
+
 ### Signup Page
 
 ### Logout Page
