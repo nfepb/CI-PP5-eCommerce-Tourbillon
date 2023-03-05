@@ -110,7 +110,7 @@ The websites of several watch houses helped me define what were some of the crit
 ## Typography
 
 * <i>Monsieur La Doulaise</i> is used for the site logo.
-* <i>Homemade Apple<i> us used for site titles.
+* <i>Homemade Apple</i> is used for site titles.
 * <i>Montserrat</i> is used for the rest of the content of the site, including headers.
 
 ## Colours
@@ -133,9 +133,19 @@ The mobile and desktop for this project can be found [here]()
 
 ### Navbar
 
+* The navigation bar appears on every page so users can easily navigate through the site
+* Navigation bar has links for 'Home', 'All Products', 'Categories', 'Gender', 'More' and icons for account and bag, along with a search bar.
+
 ### Footer
 
+* Appears on every page and contains FAQ's, Shipping Info, Privacy Policy, Subscribe form, and Social links
+* Social links are opened in a new tab to avoid sending users away from our site
+
 ### Home Page
+
+* The Login/Register feature is located in the upper right corner and offers the user to log in or register for an account as well as log out of the site
+* When the user is logged in links for 'Login' and 'Register' will change to 'My Profile', 'Logout' and add Whishlist
+* The admin user has extra access that allow them to add, update and remove products from the store
 
 ### Login Page
 
@@ -150,6 +160,9 @@ The mobile and desktop for this project can be found [here]()
 #### Review
 
 ### Shopping Bag
+
+* The shopping bag is situated on the top right corner of the site and it is always visible for the user throughout all the pages. With one click they can access their shopping bag to see what is in there, update the quantities of products they wish to purchase or to delete them from the shopping bag
+* The navbar is fully responsive, collapsing into a hamburger menu for medium and small screen size
 
 ### Checkout
 
@@ -166,6 +179,7 @@ The mobile and desktop for this project can be found [here]()
 ### Messages - Checkout Confirmation
 
 ## Future Features
+- Add stock on product to know if there are still products in store for sale. Otherwise, this product would uncheck the checkbox on product `available`. Extra logic would provide this information to website users.
 
 ## Issues remaining
 - When a user tries to modify a pubished review: `TemplateDoesNotExist` error message.
