@@ -1,7 +1,11 @@
 ![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
 
 # PP5-eCommerce-Tourbillon
+Tourbillon is a fictional e-commerce watch reseller based in Ireland. They specialise in luxury timepieces for men and women. 
 
+That this website is for educational purposes only and the credit card payment functionality is not set up to accept real payments. If testing interactively, feel free to use card details below. Further information can be viewed via Stripe documentation test page.
+
+4242424242424242 (Visa) Expiration date = Any future date (Example: 12/24) CVN = any 3 digits (Example: 132) Postcode = any 5 digits (Example: 12345)
 
 # Strategy Plane
 

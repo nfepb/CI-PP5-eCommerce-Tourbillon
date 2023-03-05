@@ -50,7 +50,9 @@ i {
 body {
     font-family: 'Roboto', sans-serif;
     font-size: 1.2rem;
-    background-color: whitesmoke;
+    background: url('/media/lucas-santos-huRn8ECqADI-unsplash.jpg') no-repeat center left fixed;
+    background-size: cover;
+    height: 100vh;
 }
 
 header {
@@ -280,19 +282,9 @@ footer h6,
     border: 1px solid var(--prussian-blue);
 }
 
-.btn-secundary {
-    border: 1px solid black;
-    color: black;
-    font-size: 16px;
-    background-color: whitesmoke;
-}
-
-.btn-secundary:hover {
-    background-color: var(--prussian-blue);
+.home-message {
     color: whitesmoke;
-    opacity: 0.9 !important;
 }
-
 
 /***********/
 /* FOOTER */
@@ -300,6 +292,7 @@ footer {
     background-color: var(--prussian-blue);
     border-top: 2px solid var(--silver-grey);
     color: whitesmoke;
+    bottom: 0;
 }
 
 footer h6,
@@ -598,13 +591,6 @@ input[name='q']::placeholder {
 
     .header-container {
         padding-top: 64px;
-    }
-
-    #footer .trust-company {
-        width: 180px;
-        position: relative;
-        margin-top: -130px;
-        margin-left: 380px;
     }
 
     #footer .copyright p {
