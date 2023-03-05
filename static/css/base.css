@@ -61,6 +61,10 @@ hr {
     color: var(--prussian-blue);
 }
 
+h2 {
+    font-family: 'Homemade Apple', cursive;
+}
+
 /***********/
 /* BASE.HTML */
 
