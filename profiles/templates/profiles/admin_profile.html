@@ -24,7 +24,7 @@ Profile{% endblock %} {% block extra_css %}
     <div class="col text-center">
       <a href="{% url 'product_management' %}">
         <div class="btn btn-style accounts-btns rounded-1">
-          <span><i class="fal fa-watch"></i></span>
+          <span><i class="fas fa-cogs pe-2"></i></span>
           Product Management
         </div>
       </a>
@@ -33,7 +33,7 @@ Profile{% endblock %} {% block extra_css %}
   </div>
   <div class="row mt-5">
     <div class="col text-center">
-      <a href="">
+      <a href="{% url 'product_management' %}">
         <div class="btn btn-style accounts-btns rounded-1">
           <span><i class="fas fa-question pe-2"></i></span>
           FAQ's
@@ -44,7 +44,7 @@ Profile{% endblock %} {% block extra_css %}
   </div>
   <div class="row mt-5">
     <div class="col text-center">
-      <a href="{% url 'newsletter' %}">
+      <a href="">
         <div class="btn btn-style accounts-btns rounded-1">
           <span><i class="fas fa-users pe-2"></i></span>
           Newsletter
