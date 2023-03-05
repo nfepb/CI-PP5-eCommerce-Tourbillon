@@ -1,4 +1,10 @@
 User-agent: *
 Disallow: /accounts/
 Disallow: /bag/
-Sitemap: https://mu-project-name.herokuapp.com/sitemap.xml
+Disallow: /accounts/
+Disallow: /checkout/
+Disallow: /profiles/
+Disallow: /books/add_book/
+Disallow: /books/add_category/
+Disallow: /newsletter/
+Sitemap: https://pp5-ecommerce-tourbillon.herokuapp.com/sitemap.xml

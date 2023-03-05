@@ -103,9 +103,10 @@ The websites of several watch houses helped me define what were some of the crit
 
 # Structure Plane
 
-## Database Diagram 
+## Database Diagram & Sitemap
 
 ![Database Diagram](docs/schema/tourbillon-database-diagram.png)
+![Sitemap Diagram](docs/schema/tourbillon-sitemap.png)
 
 ## Typography
 
@@ -182,11 +183,16 @@ The mobile and desktop for this project can be found [here]()
 
 ### Messages - Checkout Confirmation
 
+### Social Media
+![Facebook page Tourbillon](docs/features/screenshot-facebook.png)
+
 ## Future Features
 - Add stock on product to know if there are still products in store for sale. Otherwise, this product would uncheck the checkbox on product `available`. Extra logic would provide this information to website users.
+- Back to top button
 
 ## Issues remaining
 - When a user tries to modify a pubished review: `TemplateDoesNotExist` error message.
+- Styling was not prioritised due to the time constraint. 
 
 
 # Marketing Strategy (Optional)
@@ -208,6 +214,7 @@ The mobile and desktop for this project can be found [here]()
 - The keywords were chosen based on common topics and themes within the horology industry.
 - To test the relevance of the keywords, each table entry was tested on Google. The number of results and several search suggestions after an initial search were added to the keyword list. The words that are in red and stricken out were not targeted in this project. Wordtracker helped identifying these keywords as too popular, which would be too difficult to target against better established actors.
 - Words stricken out and faded were not included as they were not relevant or specific to the site.
+![SEO Keychain](docs/features/doc-seo-keychain.png)
 
 ## Sitemap
 
@@ -220,6 +227,37 @@ The mobile and desktop for this project can be found [here]()
 
 - A robots.txt file was also created to increase the quality of the site. This file tells search engines where they are not to go on the website by listing the folders & files that will not be indexed or crawled. It ultimately improves the SEO ranking.
 <br>
+
+# Validation
+
+## HTML Validation
+HTML files that have been validated with W3.
+
+* index.html / home.html
+* products.html
+* product_details.html
+* add_product.html
+* edit_product.html
+* add_category.html
+* edit_category.html
+* bag.html
+* checkout.html
+* checkout_success.html
+* questions.html
+* add_question.html
+* edit_question.html
+* wishlist.html
+* profiles.html
+* 404.html
+
+## W3C CSS Validator
+Checked using W3C CSS Validator ensuring there were no errors or warnings present.
+
+## Python Validation
+I used autopep8 to validate all the Python files and checked them with Flake8.
+
+## JSHint
+I checked the JS files with JSHint for conformity.
 
 # Privacy Policy
 
