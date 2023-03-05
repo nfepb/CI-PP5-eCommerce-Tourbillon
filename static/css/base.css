@@ -574,16 +574,11 @@ input[name='q']::placeholder {
         -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
         flex-direction: column !important;
+        justify-content: center;
     }
 
     .header-container {
         padding-top: 64px;
-    }
-
-    #footer ul li,
-    #footer .sub-title,
-    #footer p {
-        width: 300px;
     }
 
     #footer .trust-company {
