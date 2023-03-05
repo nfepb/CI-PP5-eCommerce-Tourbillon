@@ -3,7 +3,7 @@ from django.contrib import admin
 from django_summernote.admin import SummernoteModelAdmin
 from .models import (
     Product, Brand, Category, GenderCategory,
-    ProductStatus
+    ProductStatus, Review
     )
 
 
