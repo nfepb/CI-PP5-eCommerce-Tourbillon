@@ -152,7 +152,7 @@
       <h5 class="my-2 text-uppercase">
         <i class="fad fa-box-full"></i>
         <!-- Delivery banner -->
-        <span class="text-success">Free</span> delivery on orders over € 
+        <span class="text-success">Free</span> delivery on orders over €
         <!-- Delivery variable -->
         {{ free_delivery_threshold }}!
       </h5>
@@ -222,6 +222,15 @@
               Discover how to find the best watch and enjoy exclusive products
               and offers via email
             </p>
+            <form action="{% url 'subscribers' %}" method="POST">
+              {% csrf_token %} {{ subscribe_form | crispy }}
+              <input
+                type="submit"
+                class="btn-light submit btn mt-2 rounded-1 d-block"
+                value="Subscribe"
+                placeholder="Subscriber Email*"
+              />
+            </form>
           </div>
           <div class="col-sm-12 col-md-4">
             <h3 class="sub-title">Support</h3>

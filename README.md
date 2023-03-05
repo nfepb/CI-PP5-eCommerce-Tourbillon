@@ -136,33 +136,56 @@ The mobile and desktop for this project can be found [here]()
 
 * The navigation bar appears on every page so users can easily navigate through the site
 * Navigation bar has links for 'Home', 'All Products', 'Categories', 'Gender', 'More' and icons for account and bag, along with a search bar.
+![Navbar](docs/features/navbar.png)
 
 ### Footer
 
 * Appears on every page and contains FAQ's, Shipping Info, Privacy Policy, Subscribe form, and Social links
 * Social links are opened in a new tab to avoid sending users away from our site
+![Footer](docs/features/footer.png)
 
 ### Home Page
 
 * The Login/Register feature is located in the upper right corner and offers the user to log in or register for an account as well as log out of the site
 * When the user is logged in links for 'Login' and 'Register' will change to 'My Profile', 'Logout' and add Whishlist
 * The admin user has extra access that allow them to add, update and remove products from the store
+![Homepage](docs/features/homepage.png)
 
 ### Login Page
 
 * The Login/Register feature is located in the upper right corner and offers the user to log in or register for an account as well as log out of the site
 * When the user is logged in links for 'Login' and 'Register' will change to 'My Profile', 'Logout'
 * The admin user has extra access that allow them to add, update and remove products & categories from the store
+![Login](docs/features/login.png)
 
 ### Signup Page
+![Signup page](docs/features/signup.png)
+* After submitting the Signup form, the user will be redirected to this page, advising them to check the link sent to their email box.
+![Verify your email](docs/features/Verify-email.png)
+* After submitting the Signup form, the user will be redirected to this page, advising them to check the link sent to their email box.
+![Email confirmation page]()
+* Once the user clicks on the link sent to their email box, it will redirect the user to this page which confirms their email.
 
 ### Logout Page
+![Logout Page](docs/features/logout.png)
+* Users can logout from any page and are asked to confirm their action.
 
 ### Products Listing
+![Products listing](docs/features/products-page.png)
+* The products page allow users to view all the products sold on the site. Users can visit the templates page which will display all products relating to templates. Or they can visit the designs products page which lists all design products.
+* Users are provided already some product specific information and can interact with the list direction and categorization.
+* Store admins have the possibility of deleting or modifying the information of the products.
+* The 'Add to bag' button will take users to the product details page, so will the product image.
 
-### Product Details Page
+### Product Details Page & Review
+![Product details summary](docs/features/product-details-summary.png)
+* Users can find general information from the page they land on about the product such as the price, the categories, the Brand, and how it is rate by other users.
+* Users can add the item to their bag or go back to the previous page and find other products. 
+![Product details addtional information](docs/features/product-details-additional-info.png)
+* By scrolling down, users can find additional information about the watch and characteristics of this specific model. 
+![Product Review](docs/features/product-details-reviews.png)
+* At the bottom of the page, users can read the detail of the reviews posted about this specific product. If a user is not logged in, a message is asking to log in or sign up in order to post a review. If the user has already posted about this specific product, they cannot post a new message. Nonetheless, they <i>should</i> be able to amend their message. This functionality stopped working post deployment. However, deleting the review is possible.
 
-#### Review
 
 ### Shopping Bag
 
