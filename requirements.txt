@@ -6,9 +6,12 @@ Django==3.2.17
 django-allauth==0.52.0
 django-countries==7.5.1
 django-crispy-forms==1.14.0
+django-pandas==0.6.6
 django-summernote==0.8.20.0
 gunicorn==20.1.0
+numpy==1.24.2
 oauthlib==3.2.2
+pandas==1.5.3
 Pillow==9.4.0
 psycopg2==2.9.5
 PyJWT==2.6.0
