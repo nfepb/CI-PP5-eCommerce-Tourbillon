@@ -47,9 +47,9 @@
         <a href="{% url 'products' %}?category=Automatic" class="dropdown-item"
           >Automatic Watches</a
         >
-        <a href="" class="dropdown-item">Classic Watches</a>
-        <a href="" class="dropdown-item">Tourbillon Watches</a>
-        <a href="" class="dropdown-item">All Watches</a>
+        <a href="{% url 'products' %}?category=Classic" class="dropdown-item">Classic Watches</a>
+        <a href="{% url 'products' %}?category=Tourbillon" class="dropdown-item">Tourbillon Watches</a>
+        <a href="{% url 'products' %}?category=Automatic,Classic,Tourbillon,Other" class="dropdown-item">All Watches</a>
       </div>
     </li>
     <li class="nav-item dropdown">
