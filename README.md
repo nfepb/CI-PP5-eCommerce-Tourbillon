@@ -1,4 +1,4 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+![Responsive Tourbillon website](docs/wireframes/responsive-website.png)
 
 # PP5-eCommerce-Tourbillon
 Tourbillon is a fictional e-commerce watch reseller based in Ireland. They specialise in luxury timepieces for men and women. 
@@ -6,6 +6,49 @@ Tourbillon is a fictional e-commerce watch reseller based in Ireland. They speci
 That this website is for educational purposes only and the credit card payment functionality is not set up to accept real payments. If testing interactively, feel free to use card details below. Further information can be viewed via Stripe documentation test page.
 
 4242424242424242 (Visa) Expiration date = Any future date (Example: 12/24) CVN = any 3 digits (Example: 132) Postcode = any 5 digits (Example: 12345)
+
+You can find the [live project here](https://pp5-ecommerce-tourbillon.herokuapp.com/)
+
+## README Table of Content
+
+- [Strategy Plane](#strategy-plane)
+    - [App's Goals](#apps-goals)
+    - [Site User / Target Audience / Demographic](#site-user--target-audience--demographic)
+- [Scope Plane](#scope-plane)
+    - [User Experience (UX)](#user-experience-ux)
+        - [User Stories](#user-stories)
+    - [Agile Methodology](#agile-methodology)
+- [Structure Plane](#structure-plane)
+    - [Database Diagram & Sitemap](#database-diagram--sitemap)
+    - [Typography](#typography)
+    - [Colours](#colours)
+    - [Images](#images)
+    - [Wireframes](#wireframes)
+- [Surface Plane](#surface-plane)
+    - [Features](#features)
+    - [Future features](#future-features)
+    - [Issues remaining](#issues-remaining)
+- [Marketing Strategy](#marketing-strategy-optional)
+- [SEO](#search-engine-optimization-seo)
+    - [Sitemap](#sitemap)
+    - [Robots.txt](#robotstxt)
+- [Privacy policy](#privacy-policy)
+- [Technologies](#technologies)
+    - [Github deployment](#github-deployment)
+    - [Creating the Django app](#creating-the-django-app)
+    - [Install Allauth](#install-allauth)
+    - [Stripe](#stripe)
+    - [Amazon Web Services](#amazon-web-services)
+    - [Gmail](#google-email)
+    - [Deployment](#deployment)
+    - [Migrating database](#migrating-databases)
+    - [Final deployment](#final-deployment)
+    - [Cloning This Project / Local Deployment](#cloning-this-project--local-deployment)
+- [Credits](#credits)
+- [Media](#media)
+    - [Acknowledgements](#acknowledgements)
+
+
 
 # Strategy Plane
 
@@ -88,8 +131,9 @@ The user stories are categories in 3 classes of users:
         * to manage the community engagement and only allow useful comments to be posted.
     07. Publish and manage a FAQ visible on the website,
         * to allow users to find up-to-date information on the questions they ask themselves.
+<br>
 
-## Agile Methodology
+## Agile Methodology
 
 The principles of the Agile Methodology framed how this project was tackled. The GitHub project management tools were used to keep track of the different sprints. They can be found [here](https://github.com/users/nfepb/projects/5/views/2?visibleFields=%5B%22Title%22%2C%22Status%22%2C%22Labels%22%2C%22Milestone%22%5D).
 
@@ -361,7 +405,7 @@ Inside this file add these 3 lines:
 1. In your local environment(env.py) and Heroku, create environment variable `STRIPE_WH_SECRET` with the secret values os.`environ.setdefault('STRIPE_WH_SECRET', 'YOUR_VALUE_GOES_HERE')`
 1. Test the webhook and note the success/fail attempts for troubleshooting, see events and logs for further testing.
 
-## Amazon WebServices
+## Amazon Web Services
 1. Create an account at aws.amazon.com
 1. Open the S3 application and create an S3 bucket
 1. Select AWS Region.

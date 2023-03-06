@@ -62,4 +62,3 @@ Checked using W3C CSS Validator ensuring there were no errors or warnings presen
 
 * Bootstrap toast issue in the console. Can be disregarded
 * Script for back to top button (WIP)
-*
