@@ -55,8 +55,8 @@
               {% if request.user.is_authenticated %} 
                 {% if request.user.is_superuser %}
               <li>
-                <a href="{% url 'account_overview' %}" class="dropdown-item"
-                  >My Account</a
+                <a href="{% url 'newsletter' %}" class="dropdown-item"
+                  >Newsletter</a
                 >
               </li>
               <li>
@@ -74,6 +74,11 @@
                   aria-label="Go to the profile page"
                   class="dropdown-item"
                   >My Profile</a
+                >
+              </li>
+              <li>
+                <a href="{% url 'account_overview' %}" class="dropdown-item"
+                  >My Account</a
                 >
               </li>
               <li>
