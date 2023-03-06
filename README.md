@@ -160,18 +160,21 @@ The mobile and desktop for this project can be found [here]()
 ![Login](docs/features/login.png)
 
 ### Signup Page
+
 ![Signup page](docs/features/signup.png)
 * After submitting the Signup form, the user will be redirected to this page, advising them to check the link sent to their email box.
 ![Verify your email](docs/features/Verify-email.png)
 * After submitting the Signup form, the user will be redirected to this page, advising them to check the link sent to their email box.
-![Email confirmation page]()
+![Email confirmation page](docs/features/confirmation-email.png)
 * Once the user clicks on the link sent to their email box, it will redirect the user to this page which confirms their email.
 
 ### Logout Page
+
 ![Logout Page](docs/features/logout.png)
 * Users can logout from any page and are asked to confirm their action.
 
 ### Products Listing
+
 ![Products listing](docs/features/products-page.png)
 * The products page allow users to view all the products sold on the site. Users can visit the templates page which will display all products relating to templates. Or they can visit the designs products page which lists all design products.
 * Users are provided already some product specific information and can interact with the list direction and categorization.
@@ -179,6 +182,7 @@ The mobile and desktop for this project can be found [here]()
 * The 'Add to bag' button will take users to the product details page, so will the product image.
 
 ### Product Details Page & Review
+
 ![Product details summary](docs/features/product-details-summary.png)
 * Users can find general information from the page they land on about the product such as the price, the categories, the Brand, and how it is rate by other users.
 * Users can add the item to their bag or go back to the previous page and find other products. 
@@ -189,36 +193,45 @@ The mobile and desktop for this project can be found [here]()
 * At the bottom of the page, users can read the detail of the reviews posted about this specific product. If a user is not logged in, a message is asking to log in or sign up in order to post a review. If the user has already posted about this specific product, they cannot post a new message. Nonetheless, they <i>should</i> be able to amend their message. This functionality stopped working post deployment. However, deleting the review is possible.
 
 ### Shopping Bag
+
 ![Shopping bag summary](docs/features/shopping-bag.png)
 * The shopping bag is situated on the top right corner of the site and it is always visible for the user throughout all the pages. With one click they can access their shopping bag to see what is in there, update the quantities of products they wish to purchase or to delete them from the shopping bag.
 
 ### Checkout
+
 ![Checkout page](docs/features/checkout-page.png)
 * Users have to fill out their information in order to buy the products in the bag. Please use the test values to make a payment.
 
 ### Checkout - Success
+
 ![Checkout success page](docs/features/checkout-success.png)
 * An order was successfully placed. A confirmation email is sent. This logic is triggered by Stripe webhooks ensuring that the order is created should the user close the page during payment processing.
 
 ### My Account
+
 ![My Account Page](docs/features/my-account-page.png)
 * From there, users can choose to access one of the options: access their profile page to manage their details, view their previous orders, access their wishlist.
 
 ### Profile Page
+
 ![Profile Page](docs/features/profile-page.png)
 * On this page a logged in user (with a valid registration account) can add or edit their own personal details.
 
 ### Previous Orders
+
 ![Order history page](docs/features/order-history.png)
 * The previous order displays a list of all the orders previously made by the user
 
 ### Wishlist
+
 ![Wishlist Page](docs/features/wishlist.png)
 * Users can review the products they have added to their wishlist and manage them. The image is a link that will take them to the product details page.
 
 ### 404 Page
 
 ### Product Management
+![Product management page](docs/features/product-management.png)
+* Store admins can create new products and amend existing ones.
 
 ### Messages - Signup
 
@@ -226,6 +239,7 @@ The mobile and desktop for this project can be found [here]()
 
 ### Social Media
 ![Facebook page Tourbillon](docs/features/screenshot-facebook.png)
+* To engage on other channels and increase traffic and awareness of our marketplace, users can find us on Facebook. 
 
 ## Future Features
 - Add stock on product to know if there are still products in store for sale. Otherwise, this product would uncheck the checkbox on product `available`. Extra logic would provide this information to website users.
@@ -269,37 +283,6 @@ The mobile and desktop for this project can be found [here]()
 
 - A robots.txt file was also created to increase the quality of the site. This file tells search engines where they are not to go on the website by listing the folders & files that will not be indexed or crawled. It ultimately improves the SEO ranking.
 <br>
-
-# Validation
-
-## HTML Validation
-HTML files that have been validated with W3.
-
-* index.html / home.html
-* products.html
-* product_details.html
-* add_product.html
-* edit_product.html
-* add_category.html
-* edit_category.html
-* bag.html
-* checkout.html
-* checkout_success.html
-* questions.html
-* add_question.html
-* edit_question.html
-* wishlist.html
-* profiles.html
-* 404.html
-
-## W3C CSS Validator
-Checked using W3C CSS Validator ensuring there were no errors or warnings present.
-
-## Python Validation
-I used autopep8 to validate all the Python files and checked them with Flake8.
-
-## JSHint
-I checked the JS files with JSHint for conformity.
 
 # Privacy Policy
 

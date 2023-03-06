@@ -229,11 +229,12 @@
             </p>
             <form action="{% url 'subscribers' %}" method="POST">
               {% csrf_token %} {{ subscribe_form | crispy }}
+              <label for="id_subscriber_email" class=" requiredField">
+                Subscriber email<span class="asteriskField">*</span> </label>
               <input
                 type="submit"
                 class="btn-light submit btn mt-2 rounded-1 d-block"
                 value="Subscribe"
-                placeholder="Subscriber Email*"
               />
             </form>
           </div>

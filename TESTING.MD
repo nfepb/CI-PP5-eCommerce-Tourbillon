@@ -1,8 +1,40 @@
 # Lighthouse
 
-![Lighthouse Results Tourbillon](docs/testing/lighthouse.png)
+![Lighthouse Results Tourbillon](docs/testing/lighthouse-desktop.png)
+![Lighthouse Results Tourbillon](docs/testing/lighthouse-desktop.png)
+* Some drop in performance are caused by unused JS coming through jQuery.
+* Main background image can be changed format to .webp to improve performance.
 
 # HTML
+
+# Validation
+
+## HTML Validation
+HTML files that have been validated with W3.
+
+* index.html / home.html
+* products.html
+* product_details.html
+* add_product.html
+* edit_product.html
+* add_category.html
+* edit_category.html
+* bag.html
+* checkout.html
+* checkout_success.html
+* questions.html
+* add_question.html
+* edit_question.html
+* wishlist.html
+* profiles.html
+* 404.html
+
+* Some errors were identified caused by django includes.
+* Some minor issues (stray tag)
+* One form that does not have an action - this is a form in the menu. It can be disregarded. The code is from Bootstrap.
+
+## W3C CSS Validator
+Checked using W3C CSS Validator ensuring there were no errors or warnings present.
 
 # JSHINT
 * All JavaScript passed through JSHint:
@@ -19,58 +51,15 @@
 
 # Use Stories Testing
 
-## Epic: Visitor
+## Visitor
+![Visitor Stories testing](docs/testing/test-visitor.png)
+![Customer Stories testing](docs/testing/test-customer.png)
+![Stroe Admin Stories testing](docs/testing/test-store-admin.png)
 
-1. As a <strong>Visitor</strong>, I can:
-    01. Understand the purpose of this website from the homepage,
-        * to identify the value proposition.
-    02. Navigate around the site and easily find the desired content,
-        * to access information that I look for.
-    02. View the list of products and filter lists on chosen categories,
-        * to identify items that I find interesting.
-    03. Search for products to find a specific item on the app,
-        * to easily consult information on specific items.
-    04. Click on a product to view its details,
-        * to read more on items I find interesting.
-    06. View product ratings and comments so that I can read other users' opinions,
-        * to be better informed on other Tourbillon's users experience of this specific product.
-    05. Register for an account to access the services available to members.
-        * to have a personalised account and access restricted areas of the site based on my profile.
-    06. Add a product to my shopping bag,
-        * to purchase items I wish to acquire.
-    07. Access my shopping bag,
-        * to update quantities or remove items and view the total cost.
-    07. Buy a product by using the website checkout system,
-        * to check out quickly and in a secure environment.
-    08. Signup for the newsletter,
-        * to stay up to date with the latest addition to Tourbillon's catalog.
-    <br>
-    <br>
-## Epic: Customer
-2. As a <strong>Customer</strong>, I can:<br>
-    01. View my previous orders,
-        * to keep track of my previous purchases.
-    02. Post a review on a product,
-        * to share my experience and thoughts with Tourbillon's community.
-    03. Update or Delete a previously posted review.
-        * to own the content that I post on Tourbillon's app. 
-    04. Save my information to my profile,
-        * to make the checkout process easier for future purchases.
-    06. Checkout without having to fill in my previously saved information,
-        * to make the checkout process more seamless and improve the customer experience.
-    <br>
-    <br>
-## Epic: Store Administrator
-3. As a <strong>Store Administrator</strong>, I can:
-    01. Create a draft of a new product,
-        * to work on products on the backend.
-    02. Manage products,
-        * to keep product information up to date and publish only selected products on the website.
-    03. Create & manage categories,
-        * to link products to categories and make product filtering easier.
-    04. Delete products & categories,
-        * to remove categories that are no longer going to be used.
-    06. Approve users' published reviews,
-        * to manage the community engagement and only allow useful comments to be posted.
-    07. Publish and manage a FAQ visible on the website,
-        * to allow users to find up-to-date information on the questions they ask themselves.
+* The live spreadsheet can be found [here](https://docs.google.com/spreadsheets/d/1xVitEK0IMJg2WByTJi8ohOe9DsFLb5DQtrN9N_3hFAg/edit#gid=0)
+
+# Issues remaining
+
+* Bootstrap toast issue in the console. Can be disregarded
+* Script for back to top button (WIP)
+*

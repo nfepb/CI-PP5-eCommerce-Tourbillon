@@ -9,38 +9,173 @@
 
 <url>
   <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/</loc>
-  <lastmod>2023-03-06T01:42:11+00:00</lastmod>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
   <priority>1.00</priority>
 </url>
 <url>
   <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/home/</loc>
-  <lastmod>2023-03-06T01:42:11+00:00</lastmod>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/accounts/signup/</loc>
-  <lastmod>2023-03-06T01:42:11+00:00</lastmod>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/accounts/login/</loc>
-  <lastmod>2023-03-06T01:42:11+00:00</lastmod>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/bag/</loc>
-  <lastmod>2023-03-06T01:42:11+00:00</lastmod>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/?sort=price&amp;direction=asc</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/?sort=rating&amp;direction=desc</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/?sort=category&amp;direction=asc</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/?category=Automatic</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/?category=Classic</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/?category=Tourbillon</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/?category=Automatic,Classic,Tourbillon,Other</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/?gender_category=for-her</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/?gender_category=for-him</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/?gender_category=for-her,for-him</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/questions/</loc>
-  <lastmod>2023-03-06T01:42:11+00:00</lastmod>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
   <priority>0.80</priority>
 </url>
 <url>
   <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/accounts/password/reset/</loc>
-  <lastmod>2023-03-06T01:42:11+00:00</lastmod>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
   <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/4/</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/?category=classic</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/3/</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/?category=automatic</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/2/</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/6/</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/5/</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/7/</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/?category=tourbillon</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/products/1/</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/accounts/login/?next=/questions/delete_faq/2/</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/accounts/login/?next=/questions/delete_faq/1/</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/accounts/signup/?next=%2Fquestions%2Fdelete_faq%2F2%2F</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/accounts/signup/?next=%2Fquestions%2Fdelete_faq%2F1%2F</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.51</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/accounts/login/?next=%2Fquestions%2Fdelete_faq%2F2%2F</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.41</priority>
+</url>
+<url>
+  <loc>https://pp5-ecommerce-tourbillon.herokuapp.com/accounts/login/?next=%2Fquestions%2Fdelete_faq%2F1%2F</loc>
+  <lastmod>2023-03-06T09:44:46+00:00</lastmod>
+  <priority>0.41</priority>
 </url>
 
 
